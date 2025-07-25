@@ -1,0 +1,19 @@
+{
+  "name": "custom-design-tokens",
+  "version": "1.0.0",
+  "description": "Custom Design Token System using Style Dictionary",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "build:basic": "style-dictionary build",
+    "clean": "rm -rf dist/",
+    "build:clean": "npm run clean && npm run build",
+    "dev": "npm run build && open demo.html"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "style-dictionary": "^3.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
