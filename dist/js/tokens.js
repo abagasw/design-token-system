@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 25 Jul 2025 09:33:08 GMT
+ * Generated on Fri, 25 Jul 2025 09:51:27 GMT
  */
 
 export const PrimaryNavyBlue = "#001a41";
@@ -42,3 +42,6 @@ export const AccentDarkRed = "#f2e2e2";
 export const AccentDarkBlue = "#cdd6e7";
 export const AccentGreen = "#d1fcd5";
 export const BackgroundBackground = "#f4f6f8";
+export const Low = "0px 2px 4px 0px #0221401a";
+export const High = "0px 8px 16px 0px #0221401a";
+export const Pressed = "0px 1px 2px 0px #0221401a";

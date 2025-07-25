@@ -38,6 +38,9 @@
   --accent-dark-blue: #cdd6e7;
   --accent-green: #d1fcd5;
   --background-background: #f4f6f8;
+  --low: 0px 2px 4px 0px #0221401a;
+  --high: 0px 8px 16px 0px #0221401a;
+  --pressed: 0px 1px 2px 0px #0221401a;
 }
 
 /* Color Utilities */
@@ -166,3 +169,6 @@
 /* Border Radius Utilities */
 
 /* Shadow Utilities */
+.shadow-low { box-shadow: var(--low); }
+.shadow-high { box-shadow: var(--high); }
+.shadow-pressed { box-shadow: var(--pressed); }

@@ -168,6 +168,18 @@ export interface DesignTokens {
       type: 'color';
     };
   };
+  low: {
+    value: string;
+    type: 'boxShadow';
+  };
+  high: {
+    value: string;
+    type: 'boxShadow';
+  };
+  pressed: {
+    value: string;
+    type: 'boxShadow';
+  };
 
 }
 
