@@ -4,10 +4,16 @@
     "css": {
       "transformGroup": "css",
       "buildPath": "dist/css/",
-      "files": [{
-        "destination": "variables.css",
-        "format": "css/variables"
-      }]
+      "files": [
+        {
+          "destination": "variables.css",
+          "format": "css/variables"
+        },
+        {
+          "destination": "styles.css",
+          "format": "css/variables"
+        }
+      ]
     },
     "scss": {
       "transformGroup": "scss",

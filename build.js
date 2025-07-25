@@ -143,6 +143,10 @@ function createConfig() {
             format: 'css/variables'
           },
           {
+            destination: 'styles.css',
+            format: 'css/variables'
+          },
+          {
             destination: 'utilities.css',
             format: 'css/variables-with-utilities'
           }
