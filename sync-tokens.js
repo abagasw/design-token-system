@@ -4,29 +4,68 @@ const path = require('path');
 /**
  * Convert Token Studio format to Style Dictionary format
  * This script helps sync tokens between Figma Token Studio and Style Dictionary
+ * Updated to support W3C DTCG format with $value and $type
  */
 
 function convertTokenStudioToStyleDictionary(tokenStudioData) {
   const styleDictionaryTokens = {};
   
-  // Get the global token set (or first available token set)
-  const tokenSet = tokenStudioData.global || Object.values(tokenStudioData)[0];
+  // Handle W3C DTCG format with proper token set selection
+  let tokenSet;
+  
+  // Check for W3C DTCG format structure
+  if (tokenStudioData.global) {
+    tokenSet = tokenStudioData.global;
+  } else if (tokenStudioData.$tokens) {
+    // W3C DTCG format with $tokens
+    tokenSet = tokenStudioData.$tokens;
+  } else {
+    // Try to get the first available token set
+    const availableTokenSets = Object.keys(tokenStudioData).filter(key => 
+      !key.startsWith('$') && typeof tokenStudioData[key] === 'object'
+    );
+    
+    if (availableTokenSets.length > 0) {
+      tokenSet = tokenStudioData[availableTokenSets[0]];
+    } else {
+      throw new Error('No valid token set found in Token Studio data');
+    }
+  }
   
   if (!tokenSet) {
     throw new Error('No token set found in Token Studio data');
   }
   
+  console.log('🔍 Found token set with keys:', Object.keys(tokenSet));
+  
   // Recursive function to process tokens
   function processTokens(obj, result = {}) {
     for (const [key, value] of Object.entries(obj)) {
-      if (value && typeof value === 'object' && value.value !== undefined) {
-        // This is a token with a value
+      // Skip metadata keys
+      if (key.startsWith('$')) {
+        continue;
+      }
+      
+      if (value && typeof value === 'object' && (value.value !== undefined || value.$value !== undefined)) {
+        // This is a token with a value (support both W3C DTCG $value and Token Studio value)
+        const tokenValue = value.$value || value.value;
+        const tokenType = value.$type || value.type;
+        
+        console.log(`📝 Processing token: ${key} = ${tokenValue} (type: ${tokenType})`);
+        
         result[key] = {
-          value: convertValue(value.value, value.type),
-          type: convertType(value.type)
+          value: convertValue(tokenValue, tokenType),
+          type: convertType(tokenType)
         };
+        
+        // Preserve description if it exists
+        if (value.description || value.$description) {
+          result[key].description = value.description || value.$description;
+        }
+        
       } else if (value && typeof value === 'object') {
         // This is a nested group
+        console.log(`📁 Processing group: ${key}`);
         result[key] = {};
         processTokens(value, result[key]);
       }
