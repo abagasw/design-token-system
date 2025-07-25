@@ -16,6 +16,39 @@ A comprehensive design token system built with Style Dictionary, similar to the 
 
 ## 🚀 Quick Start
 
+### CDN Import (Easiest)
+
+Add this line to your CSS or HTML to instantly use all design tokens:
+
+```css
+@import url("https://cdn.jsdelivr.net/gh/MIICollaboration/design-token-system@main/dist/css/styles.css");
+```
+
+**HTML Usage:**
+```html
+<head>
+    <style>
+        @import url("https://cdn.jsdelivr.net/gh/MIICollaboration/design-token-system@main/dist/css/styles.css");
+        
+        body {
+            background: var(--primary-navy-blue);
+            color: var(--primary-pure-white);
+        }
+    </style>
+</head>
+```
+
+**CSS Usage:**
+```css
+/* Import tokens at the top of your CSS */
+@import url("https://cdn.jsdelivr.net/gh/MIICollaboration/design-token-system@main/dist/css/styles.css");
+
+.my-component {
+    background: var(--gradients-dark-red);
+    color: var(--text-primary);
+}
+```
+
 ### Installation
 
 ```bash
