@@ -201,6 +201,16 @@
         "blur": 2,
         "spread": 0
       }
+    },
+    "fontFamilies": {
+      "telkomsel-batik-sans": {
+        "$type": "fontFamilies",
+        "$value": "Telkomsel Batik Sans"
+      },
+      "poppins": {
+        "$type": "fontFamilies",
+        "$value": "Poppins"
+      }
     }
   },
   "$themes": [],
