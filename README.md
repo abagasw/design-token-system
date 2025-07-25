@@ -2,6 +2,10 @@
 
 A comprehensive design token system built with Style Dictionary, similar to the Telkomsel design system.
 
+[![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://yourusername.github.io/your-repo-name/demo.html)
+[![npm version](https://img.shields.io/badge/npm-v1.0.0-green)](package.json)
+[![License](https://img.shields.io/badge/license-ISC-blue)](LICENSE)
+
 ## 🎯 Features
 
 - **Comprehensive Design Tokens**: Colors, typography, spacing, borders, shadows, and more
@@ -210,3 +214,35 @@ Examples:
 ## 📄 License
 
 ISC License - feel free to use this design token system in your projects!
+
+## 🔗 GitHub Setup
+
+To push this project to your GitHub account:
+
+### Method 1: Using the Setup Script
+```bash
+./setup-github.sh
+```
+
+### Method 2: Manual Setup
+1. Create a new repository on GitHub
+2. Add the remote origin:
+   ```bash
+   git remote add origin https://github.com/yourusername/your-repo-name.git
+   ```
+3. Push to GitHub:
+   ```bash
+   git push -u origin main
+   ```
+
+### GitHub Pages Deployment
+1. Go to your repository settings
+2. Navigate to "Pages" section
+3. Select "GitHub Actions" as the source
+4. The demo will be available at: `https://yourusername.github.io/your-repo-name/demo.html`
+
+## 🚀 Continuous Integration
+This project includes GitHub Actions workflow that:
+- Automatically builds design tokens on every push
+- Deploys the demo page to GitHub Pages
+- Runs on Node.js 18 with npm caching for faster builds
