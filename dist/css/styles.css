@@ -1,46 +1,8 @@
 /**
  * Do not edit directly
- * Generated on Fri, 25 Jul 2025 09:17:15 GMT
+ * Generated on Fri, 25 Jul 2025 09:23:06 GMT
  */
 
 :root {
-  --primary-navy-blue: #001a41;
-  --primary-accessible-red: #ed0226;
-  --primary-telkomsel-red: #ff0025;
-  --primary-pure-white: #ffffff;
-  --secondary-positive-green: #008e53;
-  --secondary-alert-orange: #fe6e00;
-  --secondary-negative-orange: #d44000;
-  --secondary-link-blue: #0050ae;
-  --secondary-pressed-button: #990017;
-  --secondary-hovered-red: #bf021e;
-  --text-primary: #001a41;
-  --text-secondary: #4e5764;
-  --text-tertiary: #66707a;
-  --text-disabled: #99a0a7;
-  --text-placeholder: #d9d9d9;
-  --gradients-dark-red: linear-gradient(37deg, #b90024 5.35%, #ff0025 69.24%, #fd195e 100%);
-  --gradients-dark-blue: linear-gradient(33deg, #001a41 0%, #0e336c 100%);
-  --gradients-candy-red: linear-gradient(44deg, #cd0a45 58.4%, #fd2b77 100%);
-  --gradients-blue: linear-gradient(225deg, #073975 0%, #0450a9 55.03%);
-  --gradients-pink: linear-gradient(44deg, #eb82a2 58.4%, #fb2974 100%);
-  --gradients-yellow: linear-gradient(225deg, #d8db4b 0%, #eff189 54.38%);
-  --gradients-orange: linear-gradient(225deg, #df9330 0%, #f1ba72 51.35%);
-  --gradients-green: linear-gradient(225deg, #08b56d 0%, #3ecd92 53.96%);
-  --gradients-light-blue: linear-gradient(180deg, #cdd6e7 0%, #cdd6e700 100%);
-  --gradients-bronze: linear-gradient(33deg, #a47146 0%, #d9a274 100%);
-  --gradients-silver-1: linear-gradient(33deg, #939592 0%, #cdcdcd 100%);
-  --gradients-silver-2: linear-gradient(33deg, #576080 0%, #bac5db 100%);
-  --gradients-gold-1: linear-gradient(225deg, #eff189 31.97%, #b4b726 98.39%);
-  --gradients-gold-2: linear-gradient(244deg, #fcc40b 0%, #b8922f 98.39%);
-  --gradients-yellow-background: linear-gradient(180deg, #ffeed8 0%, #ffeed800 100%);
-  --accent-light-grey: #f6f3f3;
-  --accent-dark-grey: #e9e4e4;
-  --accent-light-mustard: #ffeed8;
-  --accent-light-blue: #edf5fc;
-  --accent-light-red: #fcf4f4;
-  --accent-dark-red: #f2e2e2;
-  --accent-dark-blue: #cdd6e7;
-  --accent-green: #d1fcd5;
-  --background-background: #f4f6f8;
+
 }
