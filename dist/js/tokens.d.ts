@@ -1,289 +1,171 @@
 // Generated design token types
 export interface DesignTokens {
-  color: {
-    brand: {
-      primary: {
-        value: string;
-        type: 'color';
-      };
-      secondary: {
-        value: string;
-        type: 'color';
-      };
-      success: {
-        value: string;
-        type: 'color';
-      };
-      danger: {
-        value: string;
-        type: 'color';
-      };
-      warning: {
-        value: string;
-        type: 'color';
-      };
-      info: {
-        value: string;
-        type: 'color';
-      };
+  primary: {
+    navy-blue: {
+      value: string;
+      type: 'color';
     };
-    neutral: {
-      white: {
-        value: string;
-        type: 'color';
-      };
-      black: {
-        value: string;
-        type: 'color';
-      };
-      gray: {
-        50: {
-          value: string;
-          type: 'color';
-        };
-        100: {
-          value: string;
-          type: 'color';
-        };
-        200: {
-          value: string;
-          type: 'color';
-        };
-        300: {
-          value: string;
-          type: 'color';
-        };
-        400: {
-          value: string;
-          type: 'color';
-        };
-        500: {
-          value: string;
-          type: 'color';
-        };
-        600: {
-          value: string;
-          type: 'color';
-        };
-        700: {
-          value: string;
-          type: 'color';
-        };
-        800: {
-          value: string;
-          type: 'color';
-        };
-        900: {
-          value: string;
-          type: 'color';
-        };
-      };
+    accessible-red: {
+      value: string;
+      type: 'color';
+    };
+    telkomsel-red: {
+      value: string;
+      type: 'color';
+    };
+    pure-white: {
+      value: string;
+      type: 'color';
     };
   };
-  spacing: {
-    xs: {
+  secondary: {
+    positive-green: {
       value: string;
-      type: 'spacing';
+      type: 'color';
     };
-    sm: {
+    alert-orange: {
       value: string;
-      type: 'spacing';
+      type: 'color';
     };
-    md: {
+    negative-orange: {
       value: string;
-      type: 'spacing';
+      type: 'color';
     };
-    lg: {
+    link-blue: {
       value: string;
-      type: 'spacing';
+      type: 'color';
     };
-    xl: {
+    pressed-button: {
       value: string;
-      type: 'spacing';
+      type: 'color';
     };
-    2xl: {
+    hovered-red: {
       value: string;
-      type: 'spacing';
-    };
-    3xl: {
-      value: string;
-      type: 'spacing';
+      type: 'color';
     };
   };
-  borderradius: {
-    none: {
+  text: {
+    primary: {
       value: string;
-      type: 'borderRadius';
+      type: 'color';
     };
-    sm: {
+    secondary: {
       value: string;
-      type: 'borderRadius';
+      type: 'color';
     };
-    md: {
+    tertiary: {
       value: string;
-      type: 'borderRadius';
+      type: 'color';
     };
-    lg: {
+    disabled: {
       value: string;
-      type: 'borderRadius';
+      type: 'color';
     };
-    xl: {
+    placeholder: {
       value: string;
-      type: 'borderRadius';
-    };
-    2xl: {
-      value: string;
-      type: 'borderRadius';
-    };
-    full: {
-      value: string;
-      type: 'borderRadius';
+      type: 'color';
     };
   };
-  borderWidth: {
-    none: {
+  gradients: {
+    Dark Red: {
       value: string;
-      type: 'borderWidth';
+      type: 'color';
     };
-    thin: {
+    Dark Blue: {
       value: string;
-      type: 'borderWidth';
+      type: 'color';
     };
-    medium: {
+    Candy Red: {
       value: string;
-      type: 'borderWidth';
+      type: 'color';
     };
-    thick: {
+    Blue: {
       value: string;
-      type: 'borderWidth';
+      type: 'color';
     };
-  };
-  fontSize: {
-    xs: {
+    Pink: {
       value: string;
-      type: 'fontSizes';
+      type: 'color';
     };
-    sm: {
+    Yellow: {
       value: string;
-      type: 'fontSizes';
+      type: 'color';
     };
-    base: {
+    Orange: {
       value: string;
-      type: 'fontSizes';
+      type: 'color';
     };
-    lg: {
+    Green: {
       value: string;
-      type: 'fontSizes';
+      type: 'color';
     };
-    xl: {
+    Light Blue: {
       value: string;
-      type: 'fontSizes';
+      type: 'color';
     };
-    2xl: {
+    Bronze: {
       value: string;
-      type: 'fontSizes';
+      type: 'color';
     };
-    3xl: {
+    Silver 1: {
       value: string;
-      type: 'fontSizes';
+      type: 'color';
     };
-    4xl: {
+    Silver 2: {
       value: string;
-      type: 'fontSizes';
+      type: 'color';
     };
-    5xl: {
+    Gold 1: {
       value: string;
-      type: 'fontSizes';
+      type: 'color';
     };
-    6xl: {
+    Gold 2: {
       value: string;
-      type: 'fontSizes';
+      type: 'color';
     };
-  };
-  lineHeight: {
-    none: {
+    Yellow Background: {
       value: string;
-      type: 'lineHeights';
-    };
-    tight: {
-      value: string;
-      type: 'lineHeights';
-    };
-    snug: {
-      value: string;
-      type: 'lineHeights';
-    };
-    normal: {
-      value: string;
-      type: 'lineHeights';
-    };
-    relaxed: {
-      value: string;
-      type: 'lineHeights';
-    };
-    loose: {
-      value: string;
-      type: 'lineHeights';
+      type: 'color';
     };
   };
-  fontWeight: {
-    thin: {
+  accent: {
+    light-grey: {
       value: string;
-      type: 'fontWeights';
+      type: 'color';
     };
-    extralight: {
+    dark-grey: {
       value: string;
-      type: 'fontWeights';
+      type: 'color';
     };
-    light: {
+    light-mustard: {
       value: string;
-      type: 'fontWeights';
+      type: 'color';
     };
-    normal: {
+    light-blue: {
       value: string;
-      type: 'fontWeights';
+      type: 'color';
     };
-    medium: {
+    light-red: {
       value: string;
-      type: 'fontWeights';
+      type: 'color';
     };
-    semibold: {
+    dark-red: {
       value: string;
-      type: 'fontWeights';
+      type: 'color';
     };
-    bold: {
+    dark-blue: {
       value: string;
-      type: 'fontWeights';
+      type: 'color';
     };
-    extrabold: {
+    green: {
       value: string;
-      type: 'fontWeights';
-    };
-    black: {
-      value: string;
-      type: 'fontWeights';
+      type: 'color';
     };
   };
-  shadow: {
-    sm: {
+  Background: {
+    Background: {
       value: string;
-      type: 'boxShadow';
-    };
-    base: {
-      value: string;
-      type: 'boxShadow';
-    };
-    md: {
-      value: string;
-      type: 'boxShadow';
-    };
-    lg: {
-      value: string;
-      type: 'boxShadow';
-    };
-    xl: {
-      value: string;
-      type: 'boxShadow';
+      type: 'color';
     };
   };
 
