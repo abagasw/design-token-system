@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 25 Jul 2025 09:32:24 GMT
+ * Generated on Fri, 25 Jul 2025 09:33:08 GMT
  */
 
 export const PrimaryNavyBlue = "#001a41";
