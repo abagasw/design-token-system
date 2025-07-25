@@ -1,0 +1,13 @@
+/css/styles.css
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/css/*
+  Cache-Control: public, max-age=60
+
+/json/*
+  Cache-Control: public, max-age=60
+
+/js/*
+  Cache-Control: public, max-age=60
