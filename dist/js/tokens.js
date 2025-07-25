@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 25 Jul 2025 09:51:27 GMT
+ * Generated on Fri, 25 Jul 2025 15:46:14 GMT
  */
 
 export const PrimaryNavyBlue = "#001a41";
@@ -45,3 +45,5 @@ export const BackgroundBackground = "#f4f6f8";
 export const Low = "0px 2px 4px 0px #0221401a";
 export const High = "0px 8px 16px 0px #0221401a";
 export const Pressed = "0px 1px 2px 0px #0221401a";
+export const FontFamiliesTelkomselBatikSans = "Telkomsel Batik Sans";
+export const FontFamiliesPoppins = "Poppins";

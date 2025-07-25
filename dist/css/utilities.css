@@ -41,6 +41,8 @@
   --low: 0px 2px 4px 0px #0221401a;
   --high: 0px 8px 16px 0px #0221401a;
   --pressed: 0px 1px 2px 0px #0221401a;
+  --font-families-telkomsel-batik-sans: Telkomsel Batik Sans;
+  --font-families-poppins: Poppins;
 }
 
 /* Color Utilities */

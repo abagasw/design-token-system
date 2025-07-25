@@ -180,6 +180,16 @@ export interface DesignTokens {
     value: string;
     type: 'boxShadow';
   };
+  fontFamilies: {
+    telkomsel-batik-sans: {
+      value: string;
+      type: 'fontFamilies';
+    };
+    poppins: {
+      value: string;
+      type: 'fontFamilies';
+    };
+  };
 
 }
 
