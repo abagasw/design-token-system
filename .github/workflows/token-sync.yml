@@ -116,24 +116,22 @@ jobs:
           # Ensure _headers file exists for Cloudflare Pages
           if [ ! -f "dist/_headers" ]; then
             echo "🔧 Restoring _headers file..."
-            cat > dist/_headers << 'EOF'
-# yaml-language-server: $schema=
-# Cloudflare Pages Headers - NOT YAML FORMAT
-
-/css/styles.css
-  Cache-Control: no-cache, no-store, must-revalidate
-  Pragma: no-cache
-  Expires: 0
-
-/css/*
-  Cache-Control: public, max-age=60
-
-/json/*
-  Cache-Control: public, max-age=60
-
-/js/*
-  Cache-Control: public, max-age=60
-EOF
+            echo "# yaml-language-server: \$schema=" > dist/_headers
+            echo "# Cloudflare Pages Headers - NOT YAML FORMAT" >> dist/_headers
+            echo "" >> dist/_headers
+            echo "/css/styles.css" >> dist/_headers
+            echo "  Cache-Control: no-cache, no-store, must-revalidate" >> dist/_headers
+            echo "  Pragma: no-cache" >> dist/_headers
+            echo "  Expires: 0" >> dist/_headers
+            echo "" >> dist/_headers
+            echo "/css/*" >> dist/_headers
+            echo "  Cache-Control: public, max-age=60" >> dist/_headers
+            echo "" >> dist/_headers
+            echo "/json/*" >> dist/_headers
+            echo "  Cache-Control: public, max-age=60" >> dist/_headers
+            echo "" >> dist/_headers
+            echo "/js/*" >> dist/_headers
+            echo "  Cache-Control: public, max-age=60" >> dist/_headers
             git add dist/_headers
           fi
           
