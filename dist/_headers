@@ -1,3 +1,6 @@
+# yaml-language-server: $schema=
+# Cloudflare Pages Headers - NOT YAML FORMAT
+
 /css/styles.css
   Cache-Control: no-cache, no-store, must-revalidate
   Pragma: no-cache

@@ -1,0 +1,61 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build tokens
+        run: npm run build
+        
+      - name: Verify _headers file
+        run: |
+          echo "📄 Checking _headers file..."
+          if [ -f "dist/_headers" ]; then
+            echo "✅ _headers file found:"
+            cat dist/_headers
+          else
+            echo "❌ _headers file not found"
+          fi
+        
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: design-token-system
+          directory: dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Summary
+        run: |
+          echo "## 🚀 Cloudflare Pages Deployment Complete!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY  
+          echo "### 📁 Files Deployed:" >> $GITHUB_STEP_SUMMARY
+          echo "- CSS tokens with no-cache headers" >> $GITHUB_STEP_SUMMARY
+          echo "- Font family tokens: --font-families-telkomsel-batik-sans, --font-families-poppins" >> $GITHUB_STEP_SUMMARY
+          echo "- Shadow tokens: --low, --high, --pressed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🔗 Access Your Tokens:" >> $GITHUB_STEP_SUMMARY
+          echo "- **Cloudflare Pages URL**: https://design-token-system.pages.dev" >> $GITHUB_STEP_SUMMARY
+          echo "- **CSS File**: https://design-token-system.pages.dev/css/styles.css" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### ⚡ Cache Settings:" >> $GITHUB_STEP_SUMMARY
+          echo "- styles.css: **No cache** (instant updates)" >> $GITHUB_STEP_SUMMARY
+          echo "- Other files: **60-second cache**" >> $GITHUB_STEP_SUMMARY
