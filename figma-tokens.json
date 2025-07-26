@@ -217,6 +217,16 @@
         "$type": "fontWeights",
         "$value": "Bold"
       }
+    },
+    "lineHeights": {
+      "0": {
+        "$type": "lineHeights",
+        "$value": "36"
+      },
+      "1": {
+        "$type": "lineHeights",
+        "$value": "32"
+      }
     }
   },
   "$themes": [],
