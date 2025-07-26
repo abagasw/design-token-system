@@ -211,6 +211,12 @@
         "$type": "fontFamilies",
         "$value": "Poppins"
       }
+    },
+    "fontWeights": {
+      "telkomsel-batik-sans-0": {
+        "$type": "fontWeights",
+        "$value": "Bold"
+      }
     }
   },
   "$themes": [],
