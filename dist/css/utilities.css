@@ -46,6 +46,8 @@
   --font-weights-telkomsel-batik-sans-0: Bold;
   --line-heights-0: 36;
   --line-heights-1: 32;
+  --font-size-0: 36px;
+  --font-size-1: 24px;
 }
 
 /* Color Utilities */
@@ -170,6 +172,8 @@
 /* Spacing Utilities */
 
 /* Typography Utilities */
+.text-font-size-0 { font-size: var(--font-size-0); }
+.text-font-size-1 { font-size: var(--font-size-1); }
 .font-font-weights-telkomsel-batik-sans-0 { font-weight: var(--font-weights-telkomsel-batik-sans-0); }
 
 /* Border Radius Utilities */
