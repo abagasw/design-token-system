@@ -227,6 +227,16 @@
         "$type": "lineHeights",
         "$value": "32"
       }
+    },
+    "fontSize": {
+      "0": {
+        "$type": "fontSizes",
+        "$value": "36"
+      },
+      "1": {
+        "$type": "fontSizes",
+        "$value": "24"
+      }
     }
   },
   "$themes": [],
