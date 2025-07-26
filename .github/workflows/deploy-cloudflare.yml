@@ -5,6 +5,13 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+# Add GitHub permissions for deployments
+permissions:
+  contents: read
+  deployments: write
+  statuses: write
+  checks: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -41,7 +48,7 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: design-token-system
           directory: dist
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          # Remove gitHubToken to avoid permissions issues
           
       - name: Summary
         run: |
