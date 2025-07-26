@@ -44,6 +44,8 @@
   --font-families-telkomsel-batik-sans: Telkomsel Batik Sans;
   --font-families-poppins: Poppins;
   --font-weights-telkomsel-batik-sans-0: Bold;
+  --line-heights-0: 36;
+  --line-heights-1: 32;
 }
 
 /* Color Utilities */

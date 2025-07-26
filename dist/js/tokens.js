@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 26 Jul 2025 02:04:10 GMT
+ * Generated on Sat, 26 Jul 2025 02:13:33 GMT
  */
 
 export const PrimaryNavyBlue = "#001a41";
@@ -48,3 +48,5 @@ export const Pressed = "0px 1px 2px 0px #0221401a";
 export const FontFamiliesTelkomselBatikSans = "Telkomsel Batik Sans";
 export const FontFamiliesPoppins = "Poppins";
 export const FontWeightsTelkomselBatikSans0 = "Bold";
+export const LineHeights0 = "36";
+export const LineHeights1 = "32";

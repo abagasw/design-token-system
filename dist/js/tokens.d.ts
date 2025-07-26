@@ -196,6 +196,16 @@ export interface DesignTokens {
       type: 'fontWeights';
     };
   };
+  lineHeights: {
+    0: {
+      value: string;
+      type: 'lineHeights';
+    };
+    1: {
+      value: string;
+      type: 'lineHeights';
+    };
+  };
 
 }
 
