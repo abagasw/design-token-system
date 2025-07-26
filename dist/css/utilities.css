@@ -43,6 +43,7 @@
   --pressed: 0px 1px 2px 0px #0221401a;
   --font-families-telkomsel-batik-sans: Telkomsel Batik Sans;
   --font-families-poppins: Poppins;
+  --font-weights-telkomsel-batik-sans-0: Bold;
 }
 
 /* Color Utilities */
@@ -167,6 +168,7 @@
 /* Spacing Utilities */
 
 /* Typography Utilities */
+.font-font-weights-telkomsel-batik-sans-0 { font-weight: var(--font-weights-telkomsel-batik-sans-0); }
 
 /* Border Radius Utilities */
 

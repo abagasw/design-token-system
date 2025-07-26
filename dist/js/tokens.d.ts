@@ -190,6 +190,12 @@ export interface DesignTokens {
       type: 'fontFamilies';
     };
   };
+  fontWeights: {
+    telkomsel-batik-sans-0: {
+      value: string;
+      type: 'fontWeights';
+    };
+  };
 
 }
 
