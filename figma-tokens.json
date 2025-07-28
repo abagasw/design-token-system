@@ -940,17 +940,13 @@
       },
       "3": {
         "$type": "borderRadius",
-        "$value": "4"
+        "$value": "6"
       },
       "4": {
         "$type": "borderRadius",
-        "$value": "6"
-      },
-      "5": {
-        "$type": "borderRadius",
         "$value": "8"
       },
-      "6": {
+      "5": {
         "$type": "borderRadius",
         "$value": "10"
       },
@@ -1059,6 +1055,17 @@
       "yellow-light": {
         "$type": "color",
         "$value": "#FFF1DF"
+      }
+    },
+    "focused-input": {
+      "$type": "boxShadow",
+      "$value": {
+        "x": "0",
+        "y": "0",
+        "blur": "10",
+        "spread": "0",
+        "color": "#d4d2d2",
+        "type": "dropShadow"
       }
     }
   },
