@@ -84,7 +84,7 @@
       "$type": "fontFamilies",
       "$value": "{fontFamilies.poppins}"
     },
-    "Display": {
+    "display": {
       "0": {
         "$type": "fontSizes",
         "$value": "0"
@@ -146,7 +146,7 @@
         "$value": "56"
       }
     },
-    "Heading": {
+    "heading": {
       "1": {
         "$type": "fontSizes",
         "$value": "16"
@@ -192,7 +192,7 @@
         "$value": "36"
       }
     },
-    "Body": {
+    "body": {
       "1": {
         "$type": "fontSizes",
         "$value": "12"
@@ -210,7 +210,7 @@
         "$value": "18"
       }
     },
-    "Label": {
+    "label": {
       "1": {
         "$type": "fontSizes",
         "$value": "10"
@@ -228,7 +228,7 @@
         "$value": "16"
       }
     },
-    "Caption": {
+    "caption": {
       "1": {
         "$type": "fontSizes",
         "$value": "10"
@@ -242,7 +242,7 @@
         "$value": "14"
       }
     },
-    "Hyperlink": {
+    "hyperlink": {
       "1": {
         "$type": "fontSizes",
         "$value": "10"
@@ -377,7 +377,7 @@
       "$value": {
         "fontFamily": "{telkomse-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
-        "fontSize": "{Display.14}",
+        "fontSize": "{display.14}",
         "lineHeight": "{lineHeight.10}",
         "letterSpacing": "{letterSpacing.1}"
       }
@@ -387,7 +387,7 @@
       "$value": {
         "fontFamily": "{telkomse-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
-        "fontSize": "{Display.4}",
+        "fontSize": "{display.4}",
         "lineHeight": "{lineHeight.9}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -397,7 +397,7 @@
       "$value": {
         "fontFamily": "{telkomse-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
-        "fontSize": "{Display.2}",
+        "fontSize": "{display.2}",
         "lineHeight": "{lineHeight.8}",
         "letterSpacing": "{letterSpacing.1}"
       }
@@ -407,7 +407,7 @@
       "$value": {
         "fontFamily": "{telkomse-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
-        "fontSize": "{Display.1}",
+        "fontSize": "{display.1}",
         "lineHeight": "{lineHeight.7}",
         "letterSpacing": "{letterSpacing.1}"
       }
@@ -417,7 +417,7 @@
       "$value": {
         "fontFamily": "{telkomse-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
-        "fontSize": "{Heading.8}",
+        "fontSize": "{heading.8}",
         "lineHeight": "{lineHeight.8}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -427,7 +427,7 @@
       "$value": {
         "fontFamily": "{telkomse-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
-        "fontSize": "{Heading.3}",
+        "fontSize": "{heading.3}",
         "lineHeight": "{lineHeight.6}",
         "letterSpacing": "{letterSpacing.1}"
       }
@@ -437,7 +437,7 @@
       "$value": {
         "fontFamily": "{telkomse-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
-        "fontSize": "{Heading.4}",
+        "fontSize": "{heading.4}",
         "lineHeight": "{lineHeight.6}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -447,7 +447,7 @@
       "$value": {
         "fontFamily": "{telkomse-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
-        "fontSize": "{Heading.1}",
+        "fontSize": "{heading.1}",
         "lineHeight": "{lineHeight.5}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -457,7 +457,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-bold}",
-        "fontSize": "{Body.4}",
+        "fontSize": "{body.4}",
         "lineHeight": "{lineHeight.6}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -467,7 +467,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-semibold}",
-        "fontSize": "{Body.4}",
+        "fontSize": "{body.4}",
         "lineHeight": "{lineHeight.6}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -477,7 +477,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-regular}",
-        "fontSize": "{Body.4}",
+        "fontSize": "{body.4}",
         "lineHeight": "{lineHeight.6}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -487,7 +487,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-bold}",
-        "fontSize": "{Body.3}",
+        "fontSize": "{body.3}",
         "lineHeight": "{lineHeight.5}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -497,7 +497,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-semibold}",
-        "fontSize": "{Body.3}",
+        "fontSize": "{body.3}",
         "lineHeight": "{lineHeight.5}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -507,7 +507,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-regular}",
-        "fontSize": "{Body.3}",
+        "fontSize": "{body.3}",
         "lineHeight": "{lineHeight.5}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -517,7 +517,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-bold}",
-        "fontSize": "{Body.2}",
+        "fontSize": "{body.2}",
         "lineHeight": "{lineHeight.4}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -527,7 +527,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-semibold}",
-        "fontSize": "{Body.2}",
+        "fontSize": "{body.2}",
         "lineHeight": "{lineHeight.4}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -537,7 +537,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-regular}",
-        "fontSize": "{Body.2}",
+        "fontSize": "{body.2}",
         "lineHeight": "{lineHeight.4}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -547,7 +547,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-bold}",
-        "fontSize": "{Body.1}",
+        "fontSize": "{body.1}",
         "lineHeight": "{lineHeight.3}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -557,7 +557,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-semibold}",
-        "fontSize": "{Body.1}",
+        "fontSize": "{body.1}",
         "lineHeight": "{lineHeight.3}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -567,7 +567,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-regular}",
-        "fontSize": "{Body.1}",
+        "fontSize": "{body.1}",
         "lineHeight": "{lineHeight.3}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -581,7 +581,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-regular}",
-        "fontSize": "{Hyperlink.5}",
+        "fontSize": "{hyperlink.5}",
         "lineHeight": "{lineHeight.6}",
         "textDecoration": "{underline}",
         "letterSpacing": "{letterSpacing.0}"
@@ -592,7 +592,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-regular}",
-        "fontSize": "{Hyperlink.3}",
+        "fontSize": "{hyperlink.3}",
         "lineHeight": "{lineHeight.4}",
         "textDecoration": "{underline}",
         "letterSpacing": "{letterSpacing.0}"
@@ -603,7 +603,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-bold}",
-        "fontSize": "{Caption.3}",
+        "fontSize": "{caption.3}",
         "lineHeight": "{lineHeight.4}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -613,7 +613,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-regular}",
-        "fontSize": "{Caption.3}",
+        "fontSize": "{caption.3}",
         "lineHeight": "{lineHeight.4}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -623,7 +623,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-semibold}",
-        "fontSize": "{Caption.3}",
+        "fontSize": "{caption.3}",
         "lineHeight": "{lineHeight.4}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -633,7 +633,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-bold}",
-        "fontSize": "{Caption.2}",
+        "fontSize": "{caption.2}",
         "lineHeight": "{lineHeight.4}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -643,7 +643,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-semibold}",
-        "fontSize": "{Caption.2}",
+        "fontSize": "{caption.2}",
         "lineHeight": "{lineHeight.4}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -653,7 +653,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-regular}",
-        "fontSize": "{Caption.2}",
+        "fontSize": "{caption.2}",
         "lineHeight": "{lineHeight.4}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -663,7 +663,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-regular}",
-        "fontSize": "{Label.2}",
+        "fontSize": "{label.2}",
         "lineHeight": "{lineHeight.2}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -673,7 +673,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-bold}",
-        "fontSize": "{Label.2}",
+        "fontSize": "{label.2}",
         "lineHeight": "{lineHeight.2}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -683,7 +683,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-semibold}",
-        "fontSize": "{Label.2}",
+        "fontSize": "{label.2}",
         "lineHeight": "{lineHeight.2}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -693,7 +693,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-semibold}",
-        "fontSize": "{Label.1}",
+        "fontSize": "{label.1}",
         "lineHeight": "{lineHeight.2}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -703,7 +703,7 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-bold}",
-        "fontSize": "{Label.1}",
+        "fontSize": "{label.1}",
         "lineHeight": "{lineHeight.2}",
         "letterSpacing": "{letterSpacing.0}"
       }
@@ -713,12 +713,12 @@
       "$value": {
         "fontFamily": "{poppins}",
         "fontWeight": "{poppins-regular}",
-        "fontSize": "{Label.1}",
+        "fontSize": "{label.1}",
         "lineHeight": "{lineHeight.2}",
         "letterSpacing": "{letterSpacing.0}"
       }
     },
-    "primaryColor": {
+    "primary-color": {
       "navy-blue": {
         "$type": "color",
         "$value": "#001a41"
@@ -736,7 +736,7 @@
         "$value": "#ffffff"
       }
     },
-    "secondaryColor": {
+    "secondary-color": {
       "positive-green": {
         "$type": "color",
         "$value": "#008e53"
@@ -762,7 +762,7 @@
         "$value": "#bf021e"
       }
     },
-    "textColor": {
+    "text-color": {
       "primary": {
         "$type": "color",
         "$value": "#001a41"
@@ -784,7 +784,7 @@
         "$value": "#d9d9d9"
       }
     },
-    "gradientsColor": {
+    "gradients-color": {
       "Dark Red": {
         "$type": "color",
         "$value": "linear-gradient(37deg, #b90024 5.35%, #ff0025 69.24%, #fd195e 100%)"
@@ -846,7 +846,7 @@
         "$value": "linear-gradient(180deg, #ffeed8 0%, #ffeed800 100%)"
       }
     },
-    "accentColor": {
+    "accent-color": {
       "light-grey": {
         "$type": "color",
         "$value": "#f6f3f3"
@@ -880,7 +880,7 @@
         "$value": "#d1fcd5"
       }
     },
-    "bgColor": {
+    "bg-color": {
       "Background": {
         "$type": "color",
         "$value": "#f4f6f8",
@@ -951,7 +951,7 @@
         "$value": "9999"
       }
     },
-    "brandColor": {
+    "brand-color": {
       "red": {
         "$type": "color",
         "$value": "#FF0025"
@@ -969,7 +969,7 @@
         "$value": "#001A41"
       }
     },
-    "uiColor": {
+    "ui-color": {
       "red-400": {
         "$type": "color",
         "$value": "#B61638"
@@ -1011,7 +1011,7 @@
         "$value": "#F5F4F5"
       }
     },
-    "alternativeColor": {
+    "alternative-color": {
       "purple": {
         "$type": "color",
         "$value": "#682F9B"
