@@ -78,11 +78,11 @@
     },
     "telkomse-batik-sans": {
       "$type": "fontFamilies",
-      "$value": "{fontFamilies.telkomsel-batik-sans}"
+      "$value": "Telkomsel Batik Sans"
     },
     "poppins": {
       "$type": "fontFamilies",
-      "$value": "{fontFamilies.poppins}"
+      "$value": "Poppins"
     },
     "display": {
       "0": {
@@ -782,6 +782,14 @@
       "placeholder": {
         "$type": "color",
         "$value": "#d9d9d9"
+      },
+      "red": {
+        "$type": "color",
+        "$value": "#ED1846"
+      },
+      "blue": {
+        "$type": "color",
+        "$value": "#3A96EC"
       }
     },
     "gradients-color": {
