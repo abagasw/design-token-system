@@ -174,10 +174,9 @@
   --border-radius-0: 0px;
   --border-radius-1: 2px;
   --border-radius-2: 4px;
-  --border-radius-3: 4px;
-  --border-radius-4: 6px;
-  --border-radius-5: 8px;
-  --border-radius-6: 10px;
+  --border-radius-3: 6px;
+  --border-radius-4: 8px;
+  --border-radius-5: 10px;
   --border-radius-7: 9999px;
   --brand-color-red: #FF0025;
   --brand-color-red-dark: #B90024;
@@ -203,6 +202,7 @@
   --alternative-color-orange-light: #FEF3EC;
   --alternative-color-green-light: #EEF9F7;
   --alternative-color-yellow-light: #FFF1DF;
+  --focused-input: 0px 0px 10px 0px #d4d2d2;
 }
 
 /* Color Utilities */
@@ -727,7 +727,7 @@
 .rounded-border-radius-3 { border-radius: var(--border-radius-3); }
 .rounded-border-radius-4 { border-radius: var(--border-radius-4); }
 .rounded-border-radius-5 { border-radius: var(--border-radius-5); }
-.rounded-border-radius-6 { border-radius: var(--border-radius-6); }
 .rounded-border-radius-7 { border-radius: var(--border-radius-7); }
 
 /* Shadow Utilities */
+.shadow-focused-input { box-shadow: var(--focused-input); }

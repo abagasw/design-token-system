@@ -743,10 +743,6 @@ export interface DesignTokens {
       value: string;
       type: 'borderRadius';
     };
-    6: {
-      value: string;
-      type: 'borderRadius';
-    };
     7: {
       value: string;
       type: 'borderRadius';
@@ -853,6 +849,10 @@ export interface DesignTokens {
       value: string;
       type: 'color';
     };
+  };
+  focused-input: {
+    value: string;
+    type: 'boxShadow';
   };
 
 }

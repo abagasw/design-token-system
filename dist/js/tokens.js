@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 28 Jul 2025 08:18:17 GMT
+ * Generated on Mon, 28 Jul 2025 10:03:20 GMT
  */
 
 export const 0 = "0px";
@@ -178,10 +178,9 @@ export const BorderWidth6 = "6px";
 export const BorderRadius0 = "0px";
 export const BorderRadius1 = "2px";
 export const BorderRadius2 = "4px";
-export const BorderRadius3 = "4px";
-export const BorderRadius4 = "6px";
-export const BorderRadius5 = "8px";
-export const BorderRadius6 = "10px";
+export const BorderRadius3 = "6px";
+export const BorderRadius4 = "8px";
+export const BorderRadius5 = "10px";
 export const BorderRadius7 = "9999px";
 export const BrandColorRed = "#FF0025";
 export const BrandColorRedDark = "#B90024";
@@ -207,3 +206,4 @@ export const AlternativeColorBlueLight = "#EDF7FD";
 export const AlternativeColorOrangeLight = "#FEF3EC";
 export const AlternativeColorGreenLight = "#EEF9F7";
 export const AlternativeColorYellowLight = "#FFF1DF";
+export const FocusedInput = "0px 0px 10px 0px #d4d2d2";
