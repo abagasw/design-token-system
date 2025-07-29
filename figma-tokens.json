@@ -76,7 +76,7 @@
       "$type": "spacing",
       "$value": "36"
     },
-    "telkomse-batik-sans": {
+    "telkomsel-batik-sans": {
       "$type": "fontFamilies",
       "$value": "Telkomsel Batik Sans"
     },
@@ -375,7 +375,7 @@
     "display-title-xl": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{telkomse-batik-sans}",
+        "fontFamily": "{telkomsel-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
         "fontSize": "{display.14}",
         "lineHeight": "{lineHeight.10}",
@@ -385,7 +385,7 @@
     "display-title-l": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{telkomse-batik-sans}",
+        "fontFamily": "{telkomsel-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
         "fontSize": "{display.4}",
         "lineHeight": "{lineHeight.9}",
@@ -395,7 +395,7 @@
     "display-title-m": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{telkomse-batik-sans}",
+        "fontFamily": "{telkomsel-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
         "fontSize": "{display.2}",
         "lineHeight": "{lineHeight.8}",
@@ -405,7 +405,7 @@
     "display-title-s": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{telkomse-batik-sans}",
+        "fontFamily": "{telkomsel-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
         "fontSize": "{display.1}",
         "lineHeight": "{lineHeight.7}",
@@ -415,7 +415,7 @@
     "headline-l": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{telkomse-batik-sans}",
+        "fontFamily": "{telkomsel-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
         "fontSize": "{heading.8}",
         "lineHeight": "{lineHeight.8}",
@@ -425,7 +425,7 @@
     "headline-m": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{telkomse-batik-sans}",
+        "fontFamily": "{telkomsel-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
         "fontSize": "{heading.3}",
         "lineHeight": "{lineHeight.6}",
@@ -435,7 +435,7 @@
     "subheadline-l": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{telkomse-batik-sans}",
+        "fontFamily": "{telkomsel-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
         "fontSize": "{heading.4}",
         "lineHeight": "{lineHeight.6}",
@@ -445,7 +445,7 @@
     "subheadline-m": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{telkomse-batik-sans}",
+        "fontFamily": "{telkomsel-batik-sans}",
         "fontWeight": "{telkomsel-batik-sans-bold}",
         "fontSize": "{heading.1}",
         "lineHeight": "{lineHeight.5}",
@@ -1067,18 +1067,19 @@
         "color": "#d4d2d2",
         "type": "dropShadow"
       }
-    },
-    "Test-Clamp": {
-      "extra-large": {
-        "$type": "fontSizes",
-        "$value": "clamp(2.8rem, 3.9cqw, 3.5rem)"
-      }
+    }
+  },
+  "global/global": {
+    "test-clamp": {
+      "$type": "text",
+      "$value": "clamp(2.8rem, 3.9cqw, 3.5rem)"
     }
   },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
-      "global"
+      "global",
+      "global/global"
     ]
   }
 }
