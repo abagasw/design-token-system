@@ -1075,6 +1075,12 @@
     "test": {
       "$type": "fontSizes",
       "$value": "clamp(2.8rem, 3.9cqw, 3.5rem)"
+    },
+    "Test-Clamp": {
+      "extra-large": {
+        "$type": "text",
+        "$value": "\"clamp(2.8rem, 3.9cqw, 3.5rem)\""
+      }
     }
   },
   "global/global": {
