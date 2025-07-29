@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 29 Jul 2025 06:38:06 GMT
+ * Generated on Tue, 29 Jul 2025 06:57:03 GMT
  */
 
 :root {
@@ -23,7 +23,7 @@
   --16: 32px;
   --17: 34px;
   --18: 36px;
-  --telkomse-batik-sans: Telkomsel Batik Sans;
+  --telkomsel-batik-sans: Telkomsel Batik Sans;
   --poppins: Poppins;
   --display-0: 0px;
   --display-1: 24px;
@@ -208,5 +208,4 @@
   --alternative-color-green-light: #EEF9F7;
   --alternative-color-yellow-light: #FFF1DF;
   --focused-input: 0px 0px 10px 0px #d4d2d2;
-  --test-clamp-extra-large: clamp(2.8rem, 3.9cqw, 3.5rem)px;
 }

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 29 Jul 2025 06:38:06 GMT
+ * Generated on Tue, 29 Jul 2025 06:57:03 GMT
  */
 
 export const 0 = "0px";
@@ -22,7 +22,7 @@ export const 15 = "30px";
 export const 16 = "32px";
 export const 17 = "34px";
 export const 18 = "36px";
-export const TelkomseBatikSans = "Telkomsel Batik Sans";
+export const TelkomselBatikSans = "Telkomsel Batik Sans";
 export const Poppins = "Poppins";
 export const Display0 = "0px";
 export const Display1 = "24px";
@@ -207,4 +207,3 @@ export const AlternativeColorOrangeLight = "#FEF3EC";
 export const AlternativeColorGreenLight = "#EEF9F7";
 export const AlternativeColorYellowLight = "#FFF1DF";
 export const FocusedInput = "0px 0px 10px 0px #d4d2d2";
-export const TestClampExtraLarge = "clamp(2.8rem, 3.9cqw, 3.5rem)px";
