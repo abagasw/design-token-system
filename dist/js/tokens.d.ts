@@ -862,6 +862,12 @@ export interface DesignTokens {
     value: string;
     type: 'fontSizes';
   };
+  Test-Clamp: {
+    extra-large: {
+      value: string;
+      type: 'text';
+    };
+  };
 
 }
 
