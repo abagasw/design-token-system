@@ -1081,6 +1081,34 @@
         "$type": "text",
         "$value": "\"clamp(2.8rem, 3.9cqw, 3.5rem)\""
       }
+    },
+    "0dp": {
+      "$type": "boxShadow",
+      "$value": {
+        "x": "0",
+        "y": "0",
+        "blur": "0",
+        "spread": "0",
+        "color": "#000000",
+        "type": "innerShadow"
+      }
+    },
+    "1dp": {
+      "$type": "boxShadow",
+      "$value": [
+        {
+          "x": "0",
+          "y": "1",
+          "blur": "0",
+          "spread": "0",
+          "color": "rgba(0,28,66,0.5)",
+          "type": "dropShadow"
+        }
+      ]
+    },
+    "image": {
+      "$type": "asset",
+      "$value": "https://unsplash.com/id/foto/lemari-kayu-di-samping-jendela-tirai-tipis-XlSLMRkEXb4?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"
     }
   },
   "global/global": {
