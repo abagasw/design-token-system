@@ -76,7 +76,7 @@ export interface DesignTokens {
     value: string;
     type: 'spacing';
   };
-  telkomse-batik-sans: {
+  telkomsel-batik-sans: {
     value: string;
     type: 'fontFamilies';
   };
@@ -853,12 +853,6 @@ export interface DesignTokens {
   focused-input: {
     value: string;
     type: 'boxShadow';
-  };
-  Test-Clamp: {
-    extra-large: {
-      value: string;
-      type: 'fontSizes';
-    };
   };
 
 }
