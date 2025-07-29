@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 29 Jul 2025 08:05:19 GMT
+ * Generated on Tue, 29 Jul 2025 08:31:47 GMT
  */
 
 export const 0 = "0px";
@@ -208,8 +208,10 @@ export const AlternativeColorGreenLight = "#EEF9F7";
 export const AlternativeColorYellowLight = "#FFF1DF";
 export const FocusedInput = "0px 0px 10px 0px #d4d2d2";
 export const LineThrough = "line-through";
-export const Test = "clamp(2.8rem, 3.9cqw, 3.5rem)px";
 export const TestClampExtraLarge = "\"clamp(2.8rem, 3.9cqw, 3.5rem)\"";
 export const 0dp = "0px 0px 0px 0px #000000";
 export const 1dp = "0px 1px 0px 0px rgba(0,28,66,0.5)";
 export const Image = "https://unsplash.com/id/foto/lemari-kayu-di-samping-jendela-tirai-tipis-XlSLMRkEXb4?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash";
+export const TestImage = "https://drive.google.com/file/d/1_DJifSwO0T6_K3GS3UwCdpJOAGyAHVWA/view?usp=sharing";
+export const ButtonSecondaryGrey = {"color":"#A7ABB2","width":"2px","style":"solid"};
+export const ButtonSecondaryRed = {"color":"#FF0025","width":"2px","style":"solid"};
