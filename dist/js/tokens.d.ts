@@ -858,10 +858,6 @@ export interface DesignTokens {
     value: string;
     type: 'textDecoration';
   };
-  test: {
-    value: string;
-    type: 'fontSizes';
-  };
   Test-Clamp: {
     extra-large: {
       value: string;
@@ -879,6 +875,20 @@ export interface DesignTokens {
   image: {
     value: string;
     type: 'asset';
+  };
+  test-image: {
+    value: string;
+    type: 'asset';
+  };
+  button: {
+    secondary-grey: {
+      value: string;
+      type: 'border';
+    };
+    secondary-red: {
+      value: string;
+      type: 'border';
+    };
   };
 
 }
