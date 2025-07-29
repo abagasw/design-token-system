@@ -854,6 +854,14 @@ export interface DesignTokens {
     value: string;
     type: 'boxShadow';
   };
+  line-through: {
+    value: string;
+    type: 'textDecoration';
+  };
+  test: {
+    value: string;
+    type: 'fontSizes';
+  };
 
 }
 
