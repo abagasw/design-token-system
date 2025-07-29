@@ -206,6 +206,9 @@
   --line-through: line-through;
   --test: clamp(2.8rem, 3.9cqw, 3.5rem)px;
   --test-clamp-extra-large: "clamp(2.8rem, 3.9cqw, 3.5rem)";
+  --0dp: 0px 0px 0px 0px #000000;
+  --1dp: 0px 1px 0px 0px rgba(0,28,66,0.5);
+  --image: https://unsplash.com/id/foto/lemari-kayu-di-samping-jendela-tirai-tipis-XlSLMRkEXb4?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash;
 }
 
 /* Color Utilities */
@@ -735,3 +738,5 @@
 
 /* Shadow Utilities */
 .shadow-focused-input { box-shadow: var(--focused-input); }
+.shadow-0dp { box-shadow: var(--0dp); }
+.shadow-1dp { box-shadow: var(--1dp); }
