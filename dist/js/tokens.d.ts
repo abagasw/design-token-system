@@ -854,6 +854,12 @@ export interface DesignTokens {
     value: string;
     type: 'boxShadow';
   };
+  Test-Clamp: {
+    extra-large: {
+      value: string;
+      type: 'fontSizes';
+    };
+  };
 
 }
 

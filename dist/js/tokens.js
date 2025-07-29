@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 28 Jul 2025 10:03:20 GMT
+ * Generated on Tue, 29 Jul 2025 06:38:06 GMT
  */
 
 export const 0 = "0px";
@@ -207,3 +207,4 @@ export const AlternativeColorOrangeLight = "#FEF3EC";
 export const AlternativeColorGreenLight = "#EEF9F7";
 export const AlternativeColorYellowLight = "#FFF1DF";
 export const FocusedInput = "0px 0px 10px 0px #d4d2d2";
+export const TestClampExtraLarge = "clamp(2.8rem, 3.9cqw, 3.5rem)px";
