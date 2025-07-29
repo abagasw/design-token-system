@@ -1067,6 +1067,12 @@
         "color": "#d4d2d2",
         "type": "dropShadow"
       }
+    },
+    "Test-Clamp": {
+      "extra-large": {
+        "$type": "fontSizes",
+        "$value": "clamp(2.8rem, 3.9cqw, 3.5rem)"
+      }
     }
   },
   "$themes": [],
