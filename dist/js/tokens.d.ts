@@ -868,6 +868,18 @@ export interface DesignTokens {
       type: 'text';
     };
   };
+  0dp: {
+    value: string;
+    type: 'boxShadow';
+  };
+  1dp: {
+    value: string;
+    type: 'boxShadow';
+  };
+  image: {
+    value: string;
+    type: 'asset';
+  };
 
 }
 

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 29 Jul 2025 07:21:24 GMT
+ * Generated on Tue, 29 Jul 2025 08:05:19 GMT
  */
 
 :root {
@@ -211,4 +211,7 @@
   --line-through: line-through;
   --test: clamp(2.8rem, 3.9cqw, 3.5rem)px;
   --test-clamp-extra-large: "clamp(2.8rem, 3.9cqw, 3.5rem)";
+  --0dp: 0px 0px 0px 0px #000000;
+  --1dp: 0px 1px 0px 0px rgba(0,28,66,0.5);
+  --image: https://unsplash.com/id/foto/lemari-kayu-di-samping-jendela-tirai-tipis-XlSLMRkEXb4?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash;
 }
