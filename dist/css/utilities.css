@@ -206,11 +206,16 @@
   --line-through: line-through;
   --test-clamp-extra-large: "clamp(2.8rem, 3.9cqw, 3.5rem)";
   --0dp: 0px 0px 0px 0px #000000;
-  --1dp: 0px 1px 0px 0px rgba(0,28,66,0.5);
+  --1dp: 0px 1px 0px 0px rgba(0,28,66,0.05);
+  --2dp: 0px 0px 2px 0px rgba(0,28,66,0.10), 0px 2px 2px 0px rgba(0,28,66,0.05);
+  --4dp: 0px 0px 2px 0px rgba(0,28,66,0.10), 0px 2px 10px 0px rgba(0,28,66,0.05);
+  --8dp: 0px 0px 3px 0px rgba(0,28,66,0.05), 0px 4px 20px 0px rgba(0,28,66,0.10);
+  --16dp: 0px 0px 4px 0px rgba(0,28,66,0.05), 0px 8px 40px 0px rgba(0,28,66,0.10);
   --image: https://unsplash.com/id/foto/lemari-kayu-di-samping-jendela-tirai-tipis-XlSLMRkEXb4?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash;
   --test-image: https://drive.google.com/file/d/1_DJifSwO0T6_K3GS3UwCdpJOAGyAHVWA/view?usp=sharing;
   --button-secondary-grey: [object Object];
   --button-secondary-red: [object Object];
+  --none: none;
 }
 
 /* Color Utilities */
@@ -741,3 +746,7 @@
 .shadow-focused-input { box-shadow: var(--focused-input); }
 .shadow-0dp { box-shadow: var(--0dp); }
 .shadow-1dp { box-shadow: var(--1dp); }
+.shadow-2dp { box-shadow: var(--2dp); }
+.shadow-4dp { box-shadow: var(--4dp); }
+.shadow-8dp { box-shadow: var(--8dp); }
+.shadow-16dp { box-shadow: var(--16dp); }

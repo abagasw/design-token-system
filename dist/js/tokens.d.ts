@@ -872,6 +872,22 @@ export interface DesignTokens {
     value: string;
     type: 'boxShadow';
   };
+  2dp: {
+    value: string;
+    type: 'boxShadow';
+  };
+  4dp: {
+    value: string;
+    type: 'boxShadow';
+  };
+  8dp: {
+    value: string;
+    type: 'boxShadow';
+  };
+  16dp: {
+    value: string;
+    type: 'boxShadow';
+  };
   image: {
     value: string;
     type: 'asset';
@@ -889,6 +905,10 @@ export interface DesignTokens {
       value: string;
       type: 'border';
     };
+  };
+  none: {
+    value: string;
+    type: 'textDecoration';
   };
 
 }
