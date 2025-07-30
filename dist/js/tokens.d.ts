@@ -1,78 +1,78 @@
 // Generated design token types
 export interface DesignTokens {
-  0: {
+  spacing-none: {
     value: string;
     type: 'spacing';
   };
-  1: {
+  spacing-2: {
     value: string;
     type: 'spacing';
   };
-  2: {
+  spacing-4: {
     value: string;
     type: 'spacing';
   };
-  3: {
+  spacing-6: {
     value: string;
     type: 'spacing';
   };
-  4: {
+  spacing-8: {
     value: string;
     type: 'spacing';
   };
-  5: {
+  spacing-10: {
     value: string;
     type: 'spacing';
   };
-  6: {
+  spacing-12: {
     value: string;
     type: 'spacing';
   };
-  7: {
+  spacing-14: {
     value: string;
     type: 'spacing';
   };
-  8: {
+  spacing-16: {
     value: string;
     type: 'spacing';
   };
-  9: {
+  spacing-18: {
     value: string;
     type: 'spacing';
   };
-  10: {
+  spacing-20: {
     value: string;
     type: 'spacing';
   };
-  11: {
+  spacing-22: {
     value: string;
     type: 'spacing';
   };
-  12: {
+  spacing-24: {
     value: string;
     type: 'spacing';
   };
-  13: {
+  spacing-26: {
     value: string;
     type: 'spacing';
   };
-  14: {
+  spacing-28: {
     value: string;
     type: 'spacing';
   };
-  15: {
+  spacing-30: {
     value: string;
     type: 'spacing';
   };
-  16: {
+  spacing-32: {
     value: string;
     type: 'spacing';
   };
-  17: {
+  spacing-34: {
     value: string;
     type: 'spacing';
   };
-  18: {
+  spacing-36: {
     value: string;
     type: 'spacing';
   };
@@ -89,55 +89,111 @@ export interface DesignTokens {
       value: string;
       type: 'fontSizes';
     };
-    1: {
+    24: {
       value: string;
       type: 'fontSizes';
     };
-    2: {
+    30: {
       value: string;
       type: 'fontSizes';
     };
-    3: {
+    32: {
       value: string;
       type: 'fontSizes';
     };
-    4: {
+    36: {
       value: string;
       type: 'fontSizes';
     };
-    5: {
+    38: {
       value: string;
       type: 'fontSizes';
     };
-    6: {
+    40: {
       value: string;
       type: 'fontSizes';
     };
-    7: {
+    42: {
       value: string;
       type: 'fontSizes';
     };
-    8: {
+    44: {
       value: string;
       type: 'fontSizes';
     };
-    9: {
+    46: {
       value: string;
       type: 'fontSizes';
     };
-    10: {
+    48: {
       value: string;
       type: 'fontSizes';
     };
-    11: {
+    50: {
       value: string;
       type: 'fontSizes';
     };
+    52: {
+      value: string;
+      type: 'fontSizes';
+    };
+    54: {
+      value: string;
+      type: 'fontSizes';
+    };
+    56: {
+      value: string;
+      type: 'fontSizes';
+    };
+  };
+  heading: {
+    16: {
+      value: string;
+      type: 'fontSizes';
+    };
+    18: {
+      value: string;
+      type: 'fontSizes';
+    };
+    20: {
+      value: string;
+      type: 'fontSizes';
+    };
+    22: {
+      value: string;
+      type: 'fontSizes';
+    };
+    24: {
+      value: string;
+      type: 'fontSizes';
+    };
+    26: {
+      value: string;
+      type: 'fontSizes';
+    };
+    28: {
+      value: string;
+      type: 'fontSizes';
+    };
+    30: {
+      value: string;
+      type: 'fontSizes';
+    };
+    32: {
+      value: string;
+      type: 'fontSizes';
+    };
+    34: {
+      value: string;
+      type: 'fontSizes';
+    };
+    36: {
+      value: string;
+      type: 'fontSizes';
+    };
+  };
+  body: {
     12: {
-      value: string;
-      type: 'fontSizes';
-    };
-    13: {
       value: string;
       type: 'fontSizes';
     };
@@ -145,45 +201,17 @@ export interface DesignTokens {
       value: string;
       type: 'fontSizes';
     };
+    16: {
+      value: string;
+      type: 'fontSizes';
+    };
+    18: {
+      value: string;
+      type: 'fontSizes';
+    };
   };
-  heading: {
-    1: {
-      value: string;
-      type: 'fontSizes';
-    };
-    2: {
-      value: string;
-      type: 'fontSizes';
-    };
-    3: {
-      value: string;
-      type: 'fontSizes';
-    };
-    4: {
-      value: string;
-      type: 'fontSizes';
-    };
-    5: {
-      value: string;
-      type: 'fontSizes';
-    };
-    6: {
-      value: string;
-      type: 'fontSizes';
-    };
-    8: {
-      value: string;
-      type: 'fontSizes';
-    };
-    9: {
-      value: string;
-      type: 'fontSizes';
-    };
+  label: {
     10: {
-      value: string;
-      type: 'fontSizes';
-    };
-    11: {
       value: string;
       type: 'fontSizes';
     };
@@ -191,53 +219,25 @@ export interface DesignTokens {
       value: string;
       type: 'fontSizes';
     };
-  };
-  body: {
-    1: {
+    14: {
       value: string;
       type: 'fontSizes';
     };
-    2: {
-      value: string;
-      type: 'fontSizes';
-    };
-    3: {
-      value: string;
-      type: 'fontSizes';
-    };
-    4: {
-      value: string;
-      type: 'fontSizes';
-    };
-  };
-  label: {
-    1: {
-      value: string;
-      type: 'fontSizes';
-    };
-    2: {
-      value: string;
-      type: 'fontSizes';
-    };
-    3: {
-      value: string;
-      type: 'fontSizes';
-    };
-    4: {
+    16: {
       value: string;
       type: 'fontSizes';
     };
   };
   caption: {
-    1: {
+    10: {
       value: string;
       type: 'fontSizes';
     };
-    2: {
+    12: {
       value: string;
       type: 'fontSizes';
     };
-    3: {
+    14: {
       value: string;
       type: 'fontSizes';
     };
@@ -268,47 +268,45 @@ export interface DesignTokens {
       type: 'fontSizes';
     };
   };
-  lineHeight: {
-    1: {
-      value: string;
-      type: 'lineHeights';
-    };
-    2: {
-      value: string;
-      type: 'lineHeights';
-    };
-    3: {
-      value: string;
-      type: 'lineHeights';
-    };
-    4: {
-      value: string;
-      type: 'lineHeights';
-    };
-    5: {
-      value: string;
-      type: 'lineHeights';
-    };
-    6: {
-      value: string;
-      type: 'lineHeights';
-    };
-    7: {
-      value: string;
-      type: 'lineHeights';
-    };
-    8: {
-      value: string;
-      type: 'lineHeights';
-    };
-    9: {
-      value: string;
-      type: 'lineHeights';
-    };
-    10: {
-      value: string;
-      type: 'lineHeights';
-    };
+  line-height-14: {
+    value: string;
+    type: 'lineHeights';
+  };
+  line-height-16: {
+    value: string;
+    type: 'lineHeights';
+  };
+  line-height-18: {
+    value: string;
+    type: 'lineHeights';
+  };
+  line-height-20: {
+    value: string;
+    type: 'lineHeights';
+  };
+  line-height-24: {
+    value: string;
+    type: 'lineHeights';
+  };
+  line-height-28: {
+    value: string;
+    type: 'lineHeights';
+  };
+  line-height-32: {
+    value: string;
+    type: 'lineHeights';
+  };
+  line-height-36: {
+    value: string;
+    type: 'lineHeights';
+  };
+  line-height-48: {
+    value: string;
+    type: 'lineHeights';
+  };
+  line-height-64: {
+    value: string;
+    type: 'lineHeights';
   };
   letterSpacing: {
     0: {
@@ -327,27 +325,27 @@ export interface DesignTokens {
       value: string;
       type: 'letterSpacing';
     };
-    4: {
+    -0,25: {
       value: string;
       type: 'letterSpacing';
     };
-    5: {
+    -0,2: {
       value: string;
       type: 'letterSpacing';
     };
-    6: {
+    -0,1: {
       value: string;
       type: 'letterSpacing';
     };
-    7: {
+    1,25: {
       value: string;
       type: 'letterSpacing';
     };
-    8: {
+    1,5: {
       value: string;
       type: 'letterSpacing';
     };
-    9: {
+    2,5: {
       value: string;
       type: 'letterSpacing';
     };
@@ -688,65 +686,61 @@ export interface DesignTokens {
       type: 'color';
     };
   };
-  borderWidth: {
-    0: {
-      value: string;
-      type: 'borderWidth';
-    };
-    1: {
-      value: string;
-      type: 'borderWidth';
-    };
-    2: {
-      value: string;
-      type: 'borderWidth';
-    };
-    3: {
-      value: string;
-      type: 'borderWidth';
-    };
-    4: {
-      value: string;
-      type: 'borderWidth';
-    };
-    5: {
-      value: string;
-      type: 'borderWidth';
-    };
-    6: {
-      value: string;
-      type: 'borderWidth';
-    };
+  border-width-none: {
+    value: string;
+    type: 'borderWidth';
   };
-  borderRadius: {
-    0: {
-      value: string;
-      type: 'borderRadius';
-    };
-    1: {
-      value: string;
-      type: 'borderRadius';
-    };
-    2: {
-      value: string;
-      type: 'borderRadius';
-    };
-    3: {
-      value: string;
-      type: 'borderRadius';
-    };
-    4: {
-      value: string;
-      type: 'borderRadius';
-    };
-    5: {
-      value: string;
-      type: 'borderRadius';
-    };
-    7: {
-      value: string;
-      type: 'borderRadius';
-    };
+  border-width-1: {
+    value: string;
+    type: 'borderWidth';
+  };
+  border-width-2: {
+    value: string;
+    type: 'borderWidth';
+  };
+  border-width-3: {
+    value: string;
+    type: 'borderWidth';
+  };
+  border-width-4: {
+    value: string;
+    type: 'borderWidth';
+  };
+  border-width-5: {
+    value: string;
+    type: 'borderWidth';
+  };
+  border-width-6: {
+    value: string;
+    type: 'borderWidth';
+  };
+  border-radius-none: {
+    value: string;
+    type: 'borderRadius';
+  };
+  border-radius-2: {
+    value: string;
+    type: 'borderRadius';
+  };
+  border-radius-4: {
+    value: string;
+    type: 'borderRadius';
+  };
+  border-radius-6: {
+    value: string;
+    type: 'borderRadius';
+  };
+  border-radius-8: {
+    value: string;
+    type: 'borderRadius';
+  };
+  border-radius-10: {
+    value: string;
+    type: 'borderRadius';
+  };
+  border-radius-pill: {
+    value: string;
+    type: 'borderRadius';
   };
   brand-color: {
     red: {
