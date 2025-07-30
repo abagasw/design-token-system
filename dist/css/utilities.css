@@ -35,6 +35,7 @@
   --display-52: 52px;
   --display-54: 54px;
   --display-56: 56px;
+  --display-64: 64px;
   --heading-16: 16px;
   --heading-18: 18px;
   --heading-20: 20px;
@@ -699,6 +700,7 @@
 .text-display-52 { font-size: var(--display-52); }
 .text-display-54 { font-size: var(--display-54); }
 .text-display-56 { font-size: var(--display-56); }
+.text-display-64 { font-size: var(--display-64); }
 .text-heading-16 { font-size: var(--heading-16); }
 .text-heading-18 { font-size: var(--heading-18); }
 .text-heading-20 { font-size: var(--heading-20); }

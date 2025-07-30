@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 30 Jul 2025 07:23:22 GMT
+ * Generated on Wed, 30 Jul 2025 07:48:45 GMT
  */
 
 export const SpacingNone = "0px";
@@ -39,6 +39,7 @@ export const Display50 = "50px";
 export const Display52 = "52px";
 export const Display54 = "54px";
 export const Display56 = "56px";
+export const Display64 = "64px";
 export const Heading16 = "16px";
 export const Heading18 = "18px";
 export const Heading20 = "20px";

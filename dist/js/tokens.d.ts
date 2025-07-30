@@ -145,6 +145,10 @@ export interface DesignTokens {
       value: string;
       type: 'fontSizes';
     };
+    64: {
+      value: string;
+      type: 'fontSizes';
+    };
   };
   heading: {
     16: {
