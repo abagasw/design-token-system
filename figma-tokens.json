@@ -144,6 +144,10 @@
       "56": {
         "$type": "fontSizes",
         "$value": "56"
+      },
+      "64": {
+        "$type": "fontSizes",
+        "$value": "64"
       }
     },
     "heading": {
