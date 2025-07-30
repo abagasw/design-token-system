@@ -243,27 +243,27 @@ export interface DesignTokens {
     };
   };
   hyperlink: {
-    1: {
+    10: {
       value: string;
       type: 'fontSizes';
     };
-    2: {
+    12: {
       value: string;
       type: 'fontSizes';
     };
-    3: {
+    14: {
       value: string;
       type: 'fontSizes';
     };
-    4: {
+    16: {
       value: string;
       type: 'fontSizes';
     };
-    5: {
+    18: {
       value: string;
       type: 'fontSizes';
     };
-    6: {
+    20: {
       value: string;
       type: 'fontSizes';
     };
