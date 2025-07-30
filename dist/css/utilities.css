@@ -57,12 +57,12 @@
   --caption-10: 10px;
   --caption-12: 12px;
   --caption-14: 14px;
-  --hyperlink-1: 10px;
-  --hyperlink-2: 12px;
-  --hyperlink-3: 14px;
-  --hyperlink-4: 16px;
-  --hyperlink-5: 18px;
-  --hyperlink-6: 20px;
+  --hyperlink-10: 10px;
+  --hyperlink-12: 12px;
+  --hyperlink-14: 14px;
+  --hyperlink-16: 16px;
+  --hyperlink-18: 18px;
+  --hyperlink-20: 20px;
   --line-height-14: 14;
   --line-height-16: 16;
   --line-height-18: 18;
@@ -721,12 +721,12 @@
 .text-caption-10 { font-size: var(--caption-10); }
 .text-caption-12 { font-size: var(--caption-12); }
 .text-caption-14 { font-size: var(--caption-14); }
-.text-hyperlink-1 { font-size: var(--hyperlink-1); }
-.text-hyperlink-2 { font-size: var(--hyperlink-2); }
-.text-hyperlink-3 { font-size: var(--hyperlink-3); }
-.text-hyperlink-4 { font-size: var(--hyperlink-4); }
-.text-hyperlink-5 { font-size: var(--hyperlink-5); }
-.text-hyperlink-6 { font-size: var(--hyperlink-6); }
+.text-hyperlink-10 { font-size: var(--hyperlink-10); }
+.text-hyperlink-12 { font-size: var(--hyperlink-12); }
+.text-hyperlink-14 { font-size: var(--hyperlink-14); }
+.text-hyperlink-16 { font-size: var(--hyperlink-16); }
+.text-hyperlink-18 { font-size: var(--hyperlink-18); }
+.text-hyperlink-20 { font-size: var(--hyperlink-20); }
 .font-telkomsel-batik-sans-bold { font-weight: var(--telkomsel-batik-sans-bold); }
 .font-poppins-bold { font-weight: var(--poppins-bold); }
 .font-poppins-semibold { font-weight: var(--poppins-semibold); }

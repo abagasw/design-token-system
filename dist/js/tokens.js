@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 30 Jul 2025 07:21:33 GMT
+ * Generated on Wed, 30 Jul 2025 07:23:21 GMT
  */
 
 export const SpacingNone = "0px";
@@ -61,12 +61,12 @@ export const Label16 = "16px";
 export const Caption10 = "10px";
 export const Caption12 = "12px";
 export const Caption14 = "14px";
-export const Hyperlink1 = "10px";
-export const Hyperlink2 = "12px";
-export const Hyperlink3 = "14px";
-export const Hyperlink4 = "16px";
-export const Hyperlink5 = "18px";
-export const Hyperlink6 = "20px";
+export const Hyperlink10 = "10px";
+export const Hyperlink12 = "12px";
+export const Hyperlink14 = "14px";
+export const Hyperlink16 = "16px";
+export const Hyperlink18 = "18px";
+export const Hyperlink20 = "20px";
 export const LineHeight14 = "14";
 export const LineHeight16 = "16";
 export const LineHeight18 = "18";
