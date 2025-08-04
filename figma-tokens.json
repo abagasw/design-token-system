@@ -2174,6 +2174,10 @@
     "text-capitalize": {
       "$type": "textCase",
       "$value": "capitalize"
+    },
+    "telkomse-batik-sans": {
+      "$type": "fontFamilies",
+      "$value": "Telkomsel Batik Sans"
     }
   },
   "$themes": [],
