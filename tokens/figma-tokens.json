@@ -1986,6 +1986,10 @@
       "13xl": {
         "$type": "spacing",
         "$value": "58"
+      },
+      "test": {
+        "$type": "spacing",
+        "$value": "0"
       }
     },
     "shadow": {
