@@ -1,16 +1,16 @@
 {
-  "source": ["tokens/**/*.json"],
+  "source": ["figma-tokens.json"],
   "platforms": {
     "css": {
       "transformGroup": "css",
       "buildPath": "dist/css/",
       "files": [
         {
-          "destination": "variables.css",
+          "destination": "variables-v2.css",
           "format": "css/variables"
         },
         {
-          "destination": "styles.css",
+          "destination": "styles-v2.css",
           "format": "css/variables"
         }
       ]
@@ -19,7 +19,7 @@
       "transformGroup": "scss",
       "buildPath": "dist/scss/",
       "files": [{
-        "destination": "_variables.scss",
+        "destination": "_variables-v2.scss",
         "format": "scss/variables"
       }]
     },
@@ -27,7 +27,7 @@
       "transformGroup": "js",
       "buildPath": "dist/json/",
       "files": [{
-        "destination": "tokens.json",
+        "destination": "tokens-v2.json",
         "format": "json"
       }]
     },
@@ -35,7 +35,7 @@
       "transformGroup": "js",
       "buildPath": "dist/js/",
       "files": [{
-        "destination": "tokens.js",
+        "destination": "tokens-v2.js",
         "format": "javascript/es6"
       }]
     }
