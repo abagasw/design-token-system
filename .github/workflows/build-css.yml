@@ -21,8 +21,6 @@ jobs:
     
     permissions:
       contents: write
-      pages: write
-      id-token: write
     
     steps:
       - name: Checkout
@@ -58,21 +56,16 @@ jobs:
           # Check if there are changes
           if ! git diff --quiet; then
             git add dist/
-            git add tokens/tokens.json
-            git commit -m "🤖 Auto-generate CSS from tokens [skip ci]" || exit 0
+            git add tokens/*-converted.json
+            git commit -m "🤖 Auto-generate CSS from tokens" || exit 0
             git push
             echo "✅ CSS files updated and committed"
           else
             echo "ℹ️ No changes to CSS files"
           fi
       
-      - name: Deploy to Pages
-        uses: actions/configure-pages@v4
-        
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
-      
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+      - name: Show build results
+        run: |
+          echo "✅ Build completed successfully!"
+          echo "📁 Generated files in dist/ directory:"
+          find dist/ -type f -name "*.css" -o -name "*.js" -o -name "*.json" | head -10

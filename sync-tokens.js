@@ -91,6 +91,19 @@ function convertTokenStudioToStyleDictionary(tokenStudioData) {
       }
     }
     
+    // Handle complex objects and fix reference mappings (including typography)
+    if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+      try {
+        // Fix references for all complex objects including typography tokens
+        let correctedValue = JSON.stringify(value)
+          .replace(/\{primary\}/g, '{telkomsel-batik-sans}')
+          .replace(/\{secondary\}/g, '{poppins}');
+        return JSON.parse(correctedValue);
+      } catch (e) {
+        return '[Complex Object]';
+      }
+    }
+    
     return value;
   }
   
@@ -98,13 +111,21 @@ function convertTokenStudioToStyleDictionary(tokenStudioData) {
   function convertType(type) {
     const typeMap = {
       'fontSizes': 'fontSizes',
-      'lineHeights': 'lineHeights',
+      'lineHeights': 'lineHeights', 
       'fontWeights': 'fontWeights',
+      'fontFamilies': 'fontFamilies',
       'borderRadius': 'borderRadius',
       'borderWidth': 'borderWidth',
       'spacing': 'spacing',
       'color': 'color',
-      'boxShadow': 'boxShadow'
+      'boxShadow': 'boxShadow',
+      'typography': 'typography',
+      'letterSpacing': 'letterSpacing',
+      'textDecoration': 'textDecoration',
+      'textCase': 'textCase',
+      'asset': 'asset',
+      'border': 'border',
+      'text': 'text'
     };
     
     return typeMap[type] || type;
@@ -159,37 +180,74 @@ async function syncTokens(direction = 'figma-to-style') {
     if (direction === 'figma-to-style') {
       console.log('🔄 Converting Token Studio format to Style Dictionary...');
       
-      // Read Token Studio file
-      const tokenStudioPath = path.join(__dirname, 'figma-tokens.json');
-      
-      if (!fs.existsSync(tokenStudioPath)) {
-        console.log('⚠️ figma-tokens.json not found, skipping conversion');
-        return;
-      }
-      
-      const tokenStudioData = JSON.parse(fs.readFileSync(tokenStudioPath, 'utf8'));
-      
-      // Check if file is empty or invalid
-      if (!tokenStudioData || Object.keys(tokenStudioData).length === 0) {
-        console.log('⚠️ figma-tokens.json is empty, skipping conversion');
-        return;
-      }
-      
-      // Convert to Style Dictionary format
-      const styleDictionaryTokens = convertTokenStudioToStyleDictionary(tokenStudioData);
-      
-      // Ensure tokens directory exists
+      // Get all JSON files from tokens directory
       const tokensDir = path.join(__dirname, 'tokens');
+      
       if (!fs.existsSync(tokensDir)) {
+        console.log('⚠️ Tokens directory not found, creating it...');
         fs.mkdirSync(tokensDir, { recursive: true });
+        return;
       }
       
-      // Write to tokens directory
-      const outputPath = path.join(__dirname, 'tokens', 'tokens.json');
-      fs.writeFileSync(outputPath, JSON.stringify(styleDictionaryTokens, null, 2));
+      const jsonFiles = fs.readdirSync(tokensDir)
+        .filter(file => file.endsWith('.json'))
+        .filter(file => !file.includes('-converted')) // Exclude converted files
+        .filter(file => {
+          // Only process files that look like Figma token files (check for token structure)
+          try {
+            const content = JSON.parse(fs.readFileSync(path.join(tokensDir, file), 'utf8'));
+            // Check if it's already in Style Dictionary format (has .value and .type)
+            const hasStyleDictionaryFormat = Object.values(content).some(item => 
+              typeof item === 'object' && item !== null && 
+              (item.value !== undefined || item.type !== undefined)
+            );
+            // Only process if it's NOT in Style Dictionary format (i.e., it's a Figma tokens file)
+            return !hasStyleDictionaryFormat;
+          } catch (e) {
+            console.log(`⚠️ Skipping ${file} - invalid JSON:`, e.message);
+            return false;
+          }
+        });
       
-      console.log('✅ Converted tokens saved to tokens/tokens.json');
-      console.log('🔧 Run "npm run build" to generate CSS files');
+      if (jsonFiles.length === 0) {
+        console.log('⚠️ No JSON files found in tokens directory');
+        return;
+      }
+      
+      console.log(`📁 Found ${jsonFiles.length} JSON files to process:`, jsonFiles);
+      
+      // Process each JSON file
+      for (const jsonFile of jsonFiles) {
+        const inputPath = path.join(tokensDir, jsonFile);
+        const fileName = path.parse(jsonFile).name;
+        
+        console.log(`\n🔄 Processing ${jsonFile}...`);
+        
+        try {
+          const tokenStudioData = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
+          
+          // Check if file is empty or invalid
+          if (!tokenStudioData || Object.keys(tokenStudioData).length === 0) {
+            console.log(`⚠️ ${jsonFile} is empty, skipping conversion`);
+            continue;
+          }
+          
+          // Convert to Style Dictionary format
+          const styleDictionaryTokens = convertTokenStudioToStyleDictionary(tokenStudioData);
+          
+          // Write converted file with original name prefix
+          const outputPath = path.join(tokensDir, `${fileName}-converted.json`);
+          fs.writeFileSync(outputPath, JSON.stringify(styleDictionaryTokens, null, 2));
+          
+          console.log(`✅ Converted ${jsonFile} saved to ${fileName}-converted.json`);
+          
+        } catch (error) {
+          console.error(`❌ Error processing ${jsonFile}:`, error.message);
+          continue;
+        }
+      }
+      
+      console.log('\n🔧 Run "npm run build" to generate CSS files for all converted tokens');
       
     } else if (direction === 'style-to-figma') {
       console.log('🔄 Converting Style Dictionary format to Token Studio...');
@@ -227,7 +285,7 @@ const direction = process.argv[2] || 'figma-to-style';
 
 if (!['figma-to-style', 'style-to-figma'].includes(direction)) {
   console.log('Usage: node sync-tokens.js [figma-to-style|style-to-figma]');
-  console.log('  figma-to-style: Convert figma-tokens.json to tokens/tokens.json');
+  console.log('  figma-to-style: Convert all JSON files in tokens/ to Style Dictionary format');
   console.log('  style-to-figma: Convert tokens/tokens.json to figma-tokens.json');
   process.exit(1);
 }

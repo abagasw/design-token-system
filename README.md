@@ -1,281 +1,262 @@
-# Custom Design Token System
+# 🎨 Design Token System
 
-A comprehensive design token system built with Style Dictionary, similar to the Telkomsel design system.
+Sistem Design Token menggunakan Style Dictionary untuk mengelola dan mendistribusikan design tokens ke berbagai format.
 
-[![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://yourusername.github.io/your-repo-name/demo.html)
 [![npm version](https://img.shields.io/badge/npm-v1.0.0-green)](package.json)
 [![License](https://img.shields.io/badge/license-ISC-blue)](LICENSE)
 
-## 🎯 Features
+## 📋 Daftar Isi
 
-- **Comprehensive Design Tokens**: Colors, typography, spacing, borders, shadows, and more
-- **Multiple Output Formats**: CSS variables, SCSS variables, JavaScript ES6 modules, and JSON
-- **Utility Classes**: Auto-generated utility classes for colors and spacing
-- **Custom Transforms**: Pixel to rem conversion and other custom transformations
-- **Type-Safe**: Structured token organization with clear typing
+- [Fitur Utama](#-fitur-utama)
+- [Instalasi](#-instalasi)
+- [Cara Penggunaan](#-cara-penggunaan)
+- [Struktur Project](#-struktur-project)
+- [Format Output](#-format-output)
+- [Integrasi Figma](#-integrasi-figma)
+- [Workflow GitHub Actions](#-workflow-github-actions)
 
-## 🚀 Quick Start
+## ✨ Fitur Utama
 
-### CDN Import (Easiest)
+- 🎯 **Multi-Platform Output**: CSS, SCSS, JavaScript, JSON, TypeScript
+- 🔄 **Sinkronisasi Figma**: Integrasi dengan Token Studio for Figma
+- 🚀 **Auto Build**: GitHub Actions untuk build otomatis
+- 🎨 **Utility Classes**: Generate CSS utility classes otomatis
+- 📱 **Responsive**: Konversi px ke rem otomatis
 
-Add this line to your CSS or HTML to instantly use all design tokens:
+## 🚀 Instalasi
 
-```css
-@import url("https://cdn.jsdelivr.net/gh/MIICollaboration/design-token-system@main/dist/css/styles.css");
-```
+### Prerequisites
+- Node.js (v14 atau lebih tinggi)
+- npm atau yarn
 
-**HTML Usage:**
-```html
-<head>
-    <style>
-        @import url("https://cdn.jsdelivr.net/gh/MIICollaboration/design-token-system@main/dist/css/styles.css");
-        
-        body {
-            background: var(--primary-navy-blue);
-            color: var(--primary-pure-white);
-        }
-    </style>
-</head>
-```
-
-**CSS Usage:**
-```css
-/* Import tokens at the top of your CSS */
-@import url("https://cdn.jsdelivr.net/gh/MIICollaboration/design-token-system@main/dist/css/styles.css");
-
-.my-component {
-    background: var(--gradients-dark-red);
-    color: var(--text-primary);
-}
-```
-
-### Installation
+### Setup Project
 
 ```bash
+# Clone repository
+git clone <repository-url>
+cd design-token-system
+
+# Install dependencies
 npm install
-```
 
-### Build Tokens
-
-```bash
+# Build tokens pertama kali
 npm run build
 ```
 
-This will generate tokens in multiple formats:
-- `dist/css/variables.css` - CSS custom properties
-- `dist/scss/_variables.scss` - SCSS variables
-- `dist/js/tokens.js` - JavaScript ES6 module
-- `dist/json/tokens.json` - JSON format
+## 🎯 Cara Penggunaan
 
-### Clean and Rebuild
+### 1. Mengelola Tokens
 
-```bash
-npm run build:clean
-```
-
-## 📁 Project Structure
-
-```
-custom-design-tokens/
-├── tokens/
-│   └── tokens.json          # Source design tokens
-├── dist/                    # Generated output files
-│   ├── css/
-│   ├── scss/
-│   ├── js/
-│   └── json/
-├── config.json              # Style Dictionary configuration
-├── index.js                 # Build script with custom transforms
-└── package.json
-```
-
-## 🎨 Token Categories
-
-### Colors
-- **Brand Colors**: Primary, secondary, success, danger, warning, info
-- **Neutral Colors**: White, black, and gray scale (50-900)
-
-### Spacing
-- **Scale**: xs (4px) → 3xl (64px)
-- **Usage**: Padding, margins, gaps
-
-### Typography
-- **Font Sizes**: xs (12px) → 6xl (64px)
-- **Line Heights**: none (1) → loose (2)
-- **Font Weights**: thin (100) → black (900)
-
-### Border & Layout
-- **Border Radius**: none → full (9999px)
-- **Border Width**: none → thick (4px)
-- **Shadows**: sm → xl with proper opacity
-
-## 💻 Usage Examples
-
-### CSS
-```css
-/* Use CSS custom properties */
-.button {
-  background-color: var(--color-brand-primary);
-  padding: var(--spacing-md);
-  border-radius: var(--borderradius-md);
-  font-size: var(--fontSize-base);
-}
-
-/* Or use utility classes */
-.card {
-  @apply bg-color-neutral-white p-spacing-lg;
-}
-```
-
-### JavaScript
-```javascript
-import tokens from './dist/js/tokens.js';
-
-const primaryColor = tokens.color.brand.primary.value;
-const mediumSpacing = tokens.spacing.md.value;
-```
-
-### SCSS
-```scss
-@import './dist/scss/variables';
-
-.component {
-  background-color: $color-brand-primary;
-  padding: $spacing-md;
-}
-```
-
-## 🔧 Customization
-
-### Adding New Tokens
-Edit `tokens/tokens.json`:
+Tokens disimpan dalam folder `tokens/` dengan format JSON:
 
 ```json
 {
-  "color": {
-    "brand": {
-      "tertiary": {
-        "value": "#purple",
-        "type": "color"
+  "global": {
+    "primary": {
+      "$type": "color",
+      "$value": "#FF0025"
+    },
+    "spacing": {
+      "md": {
+        "$type": "spacing",
+        "$value": "16"
       }
     }
   }
 }
 ```
 
-### Custom Transforms
-Add custom transforms in `index.js`:
+### 2. Build Tokens
 
-```javascript
-StyleDictionary.registerTransform({
-  name: 'custom/transform',
-  type: 'value',
-  matcher: function(token) {
-    return token.type === 'spacing';
-  },
-  transformer: function(token) {
-    return `${parseFloat(token.value) / 16}rem`;
-  }
-});
+```bash
+# Build semua tokens
+npm run build
+
+# Build dan bersihkan output sebelumnya
+npm run build:clean
+
+# Preview hasil di browser
+npm run dev
 ```
 
-### Output Formats
-Modify `config.json` to add new platforms or change existing ones:
+### 3. Menggunakan Output
 
-```json
-{
-  "platforms": {
-    "react-native": {
-      "transformGroup": "react-native",
-      "buildPath": "dist/rn/",
-      "files": [{
-        "destination": "tokens.js",
-        "format": "javascript/es6"
-      }]
-    }
-  }
+#### CSS Variables
+```css
+/* Import CSS variables */
+@import url('./dist/css/colors-basic/variables.css');
+
+.my-component {
+  background-color: var(--global-primary);
+  padding: var(--global-spacing-md);
 }
 ```
 
-## 🎭 Token Naming Convention
-
-- **Hierarchical**: `category.subcategory.variant`
-- **Semantic**: Meaningful names over values
-- **Consistent**: Same pattern across all token types
-
-Examples:
-- `color.brand.primary`
-- `spacing.md`
-- `fontSize.2xl`
-- `borderradius.lg`
-
-## 🏗️ Build Process
-
-1. **Source**: Design tokens defined in JSON format
-2. **Transform**: Style Dictionary applies transformations
-3. **Format**: Outputs in multiple formats (CSS, SCSS, JS, JSON)
-4. **Distribute**: Generated files ready for consumption
-
-## 📖 API Reference
-
-### Available Tokens
-
-#### Colors
-- `color.brand.*` - Brand colors (primary, secondary, etc.)
-- `color.neutral.*` - Neutral colors (white, black, gray.*)
-
-#### Spacing
-- `spacing.*` - Spacing scale (xs, sm, md, lg, xl, 2xl, 3xl)
-
-#### Typography
-- `fontSize.*` - Font size scale
-- `lineHeight.*` - Line height values
-- `fontWeight.*` - Font weight values
-
-#### Layout
-- `borderradius.*` - Border radius values
-- `borderWidth.*` - Border width values
-- `shadow.*` - Box shadow definitions
-
-## 🤝 Contributing
-
-1. Add or modify tokens in `tokens/tokens.json`
-2. Run `npm run build` to generate outputs
-3. Test the generated tokens in your application
-4. Submit a pull request with your changes
-
-## 📄 License
-
-ISC License - feel free to use this design token system in your projects!
-
-## 🔗 GitHub Setup
-
-To push this project to your GitHub account:
-
-### Method 1: Using the Setup Script
-```bash
-./setup-github.sh
+#### CSS Utility Classes
+```html
+<!-- Gunakan utility classes yang di-generate otomatis -->
+<div class="bg-global-primary p-global-spacing-md">
+  Content dengan design tokens
+</div>
 ```
 
-### Method 2: Manual Setup
-1. Create a new repository on GitHub
-2. Add the remote origin:
+#### JavaScript/TypeScript
+```javascript
+// Import tokens sebagai JavaScript object
+import tokens from './dist/js/colors-basic/tokens.js';
+
+const primaryColor = tokens.global.primary;
+```
+
+#### SCSS Variables
+```scss
+// Import SCSS variables
+@import './dist/scss/colors-basic/variables';
+
+.component {
+  background-color: $global-primary;
+  padding: $global-spacing-md;
+}
+```
+
+## 📁 Struktur Project
+
+```
+design-token-system/
+├── tokens/                    # Source tokens (JSON)
+│   ├── colors-basic.json
+│   ├── spacing-basic.json
+│   ├── figma-tokens.json
+│   └── *-converted.json       # Converted tokens
+├── dist/                      # Generated output
+│   ├── css/                   # CSS variables & utilities
+│   │   ├── colors-basic/
+│   │   ├── spacing-basic/
+│   │   └── figma-tokens/
+│   ├── scss/                  # SCSS variables
+│   ├── js/                    # JavaScript/TypeScript
+│   └── json/                  # JSON format
+├── .github/workflows/         # GitHub Actions
+│   └── build-css.yml         # Auto build workflow
+├── build.js                   # Build script
+├── sync-tokens.js            # Figma sync script
+├── config.json               # Style Dictionary config
+└── demo.html                 # Demo page
+```
+
+## 🎨 Format Output
+
+### CSS Variables
+```css
+:root {
+  --global-primary: #FF0025;
+  --global-spacing-md: 1rem;
+}
+```
+
+### CSS Utility Classes
+```css
+/* Color utilities */
+.bg-global-primary { background-color: var(--global-primary); }
+.text-global-primary { color: var(--global-primary); }
+
+/* Spacing utilities */
+.p-global-spacing-md { padding: var(--global-spacing-md); }
+.pt-global-spacing-md { padding-top: var(--global-spacing-md); }
+```
+
+### JavaScript/TypeScript
+```javascript
+export default {
+  global: {
+    primary: "#FF0025",
+    spacing: {
+      md: "1rem"
+    }
+  }
+};
+```
+
+### SCSS Variables
+```scss
+$global-primary: #FF0025;
+$global-spacing-md: 1rem;
+```
+
+## 🎭 Integrasi Figma
+
+### Setup Token Studio
+
+1. **Install Plugin**
+   - Buka Figma
+   - Install "Figma Tokens" plugin
+
+2. **Connect Repository**
+   - Pilih GitHub sebagai sync provider
+   - Repository: `your-username/design-token-system`
+   - Branch: `main`
+   - File path: `figma-tokens.json`
+
+3. **Sync Tokens**
    ```bash
-   git remote add origin https://github.com/yourusername/your-repo-name.git
-   ```
-3. Push to GitHub:
-   ```bash
-   git push -u origin main
+   # Sync dari Figma ke Style Dictionary
+   npm run sync:from-figma
+   
+   # Sync dari Style Dictionary ke Figma
+   npm run sync:to-figma
    ```
 
-### GitHub Pages Deployment
-1. Go to your repository settings
-2. Navigate to "Pages" section
-3. Select "GitHub Actions" as the source
-4. The demo will be available at: `https://yourusername.github.io/your-repo-name/demo.html`
+### Workflow Figma
 
-## 🚀 Continuous Integration
-This project includes GitHub Actions workflow that:
-- Automatically builds design tokens on every push
-- Deploys the demo page to GitHub Pages
-- Runs on Node.js 18 with npm caching for faster builds
+1. **Figma → Code**:
+   - Edit tokens di Figma Token Studio
+   - Push ke GitHub dari plugin
+   - GitHub Actions otomatis build
+
+2. **Code → Figma**:
+   - Edit file JSON di `tokens/`
+   - Run `npm run sync:to-figma`
+   - Pull dari GitHub di Figma Token Studio
+
+## 🚀 Workflow GitHub Actions
+
+### Auto Build
+
+Setiap push ke folder `tokens/` akan otomatis:
+1. Build semua tokens ke format CSS, JS, SCSS, JSON
+2. Simpan hasil di folder `dist/`
+3. Commit dan push hasil build ke repository
+
+### Manual Trigger
+
+Anda juga bisa menjalankan workflow secara manual:
+1. Buka tab "Actions" di GitHub repository
+2. Pilih "Build CSS from Tokens"
+3. Klik "Run workflow"
+
+## 🛠️ Scripts
+
+```bash
+# Build tokens
+npm run build
+
+# Build dengan clean
+npm run build:clean
+
+# Sync dari Figma
+npm run sync:from-figma
+
+# Sync ke Figma
+npm run sync:to-figma
+
+# Development server
+npm run dev
+```
+
+## 📝 License
+
+ISC License - lihat file [LICENSE](LICENSE) untuk detail.
+
+---
+
+**Dibuat dengan ❤️ menggunakan Style Dictionary**

@@ -129,21 +129,19 @@ StyleDictionary.registerTransformGroup({
   transforms: ['attribute/cti', 'name/cti/kebab', 'time/seconds', 'content/icon', 'size/rem', 'color/css']
 });
 
-// Function to create enhanced config
-function createConfig() {
+// Function to create config for specific token file
+function createConfigForFile(tokenFile) {
+  const fileName = path.parse(tokenFile).name.replace('-converted', '');
+  
   return {
-    source: ['tokens/**/*.json'],
+    source: [tokenFile],
     platforms: {
       css: {
         transformGroup: 'css',
-        buildPath: 'dist/css/',
+        buildPath: `dist/css/${fileName}/`,
         files: [
           {
             destination: 'variables.css',
-            format: 'css/variables'
-          },
-          {
-            destination: 'styles.css',
             format: 'css/variables'
           },
           {
@@ -154,7 +152,7 @@ function createConfig() {
       },
       scss: {
         transformGroup: 'scss',
-        buildPath: 'dist/scss/',
+        buildPath: `dist/scss/${fileName}/`,
         files: [{
           destination: '_variables.scss',
           format: 'scss/variables'
@@ -162,7 +160,7 @@ function createConfig() {
       },
       js: {
         transformGroup: 'js',
-        buildPath: 'dist/js/',
+        buildPath: `dist/js/${fileName}/`,
         files: [
           {
             destination: 'tokens.js',
@@ -176,7 +174,7 @@ function createConfig() {
       },
       json: {
         transformGroup: 'js',
-        buildPath: 'dist/json/',
+        buildPath: `dist/json/${fileName}/`,
         files: [{
           destination: 'tokens.json',
           format: 'json'
@@ -186,28 +184,75 @@ function createConfig() {
   };
 }
 
+// Function to get all converted token files
+function getConvertedTokenFiles() {
+  const tokensDir = path.join(__dirname, 'tokens');
+  
+  if (!fs.existsSync(tokensDir)) {
+    return [];
+  }
+  
+  return fs.readdirSync(tokensDir)
+    .filter(file => file.endsWith('-converted.json'))
+    .map(file => path.join(tokensDir, file));
+}
+
 // Build function
 function buildTokens() {
-  console.log('🎨 Building design tokens...');
-  
-  const config = createConfig();
-  const styleDictionary = StyleDictionary.extend(config);
+  console.log('🎨 Building design tokens from multiple files...');
   
   // Clean build directory
   if (fs.existsSync('dist')) {
     fs.rmSync('dist', { recursive: true, force: true });
   }
   
-  styleDictionary.buildAllPlatforms();
+  const tokenFiles = getConvertedTokenFiles();
   
-  console.log('✅ Design tokens built successfully!');
-  console.log('📁 Generated files:');
-  console.log('   - dist/css/variables.css (CSS custom properties)');
-  console.log('   - dist/css/utilities.css (CSS utilities)');
-  console.log('   - dist/scss/_variables.scss (SCSS variables)');
-  console.log('   - dist/js/tokens.js (JavaScript ES6)');
-  console.log('   - dist/js/tokens.d.ts (TypeScript definitions)');
-  console.log('   - dist/json/tokens.json (JSON format)');
+  if (tokenFiles.length === 0) {
+    console.log('⚠️ No converted token files found. Run "npm run sync:from-figma" first.');
+    return;
+  }
+  
+  console.log(`📁 Found ${tokenFiles.length} token files to build:`);
+  
+  let successCount = 0;
+  let errorCount = 0;
+  
+  tokenFiles.forEach(tokenFile => {
+    const fileName = path.parse(tokenFile).name.replace('-converted', '');
+    console.log(`\n🔨 Building tokens from: ${fileName}`);
+    
+    try {
+      const config = createConfigForFile(tokenFile);
+      const styleDictionary = StyleDictionary.extend(config);
+      
+      styleDictionary.buildAllPlatforms();
+      
+      console.log(`✅ ${fileName} built successfully!`);
+      console.log(`   📂 Output folder: dist/*/${fileName}/`);
+      successCount++;
+      
+    } catch (error) {
+      console.error(`❌ Error building ${fileName}:`, error.message);
+      errorCount++;
+    }
+  });
+  
+  console.log(`\n🎉 Build completed!`);
+  console.log(`✅ Success: ${successCount} files`);
+  if (errorCount > 0) {
+    console.log(`❌ Errors: ${errorCount} files`);
+  }
+  
+  console.log('\n📁 Generated file structure:');
+  tokenFiles.forEach(tokenFile => {
+    const fileName = path.parse(tokenFile).name.replace('-converted', '');
+    console.log(`   📂 dist/css/${fileName}/variables.css`);
+    console.log(`   📂 dist/css/${fileName}/utilities.css`);
+    console.log(`   📂 dist/scss/${fileName}/_variables.scss`);
+    console.log(`   📂 dist/js/${fileName}/tokens.js`);
+    console.log(`   📂 dist/json/${fileName}/tokens.json`);
+  });
 }
 
 // Run if called directly

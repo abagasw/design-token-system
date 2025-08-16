@@ -1117,9 +1117,5 @@
       },
       "type": "border"
     }
-  },
-  "none": {
-    "value": "none",
-    "type": "textDecoration"
   }
 }
